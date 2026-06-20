@@ -16,10 +16,6 @@ Campus administrators, counselors, teachers, testing coordinators, CTE coordinat
 6. Build pages using `report_layout/`.
 7. Configure notes using SharePoint Lists for pilots or Dataverse for scale.
 
-
-## Open as a Power BI Project / VS Code scaffold
-This repo includes `ccmr-powerbi-dashboard.pbip`, `ccmr-powerbi-dashboard.Report/definition.pbir`, and `ccmr-powerbi-dashboard.SemanticModel/model.bim`. Open the PBIP/PBIR in Power BI Desktop or inspect/edit the JSON/TMSL in VS Code online. The semantic model scaffold imports the sample CSV files, establishes relationships, creates calculated helper dimensions, and includes starter measures. See `docs/vscode_pbip_import_guide.md` for the detailed workflow.
-
 ## Templates and sample data
 `templates/` contains upload templates with headers and 10-25 synthetic rows. `sample_data/` contains larger internally consistent synthetic data: 100 students, 300 assessments, 400 transcripts, 200 skill records, 60 CTE records, 35 IBC records, 55 counselor notes, and 65 interventions.
 
