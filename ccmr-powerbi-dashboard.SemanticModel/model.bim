@@ -1,0 +1,1824 @@
+{
+  "name": "CCMR Pathway Navigator",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "Sample CSV Folder",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "sample_data"
+          }
+        },
+        "credential": {
+          "AuthenticationKind": "Anonymous"
+        }
+      }
+    ],
+    "expressions": [
+      {
+        "name": "pDataFolder",
+        "kind": "m",
+        "expression": "\"../sample_data/\"",
+        "annotations": [
+          {
+            "name": "PBI_ParameterType",
+            "value": "Text"
+          },
+          {
+            "name": "PBI_ParameterDefaultValue",
+            "value": "../sample_data/"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "DimStudent",
+        "columns": [
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "TXUniqueStudentID",
+            "dataType": "string",
+            "sourceColumn": "TXUniqueStudentID"
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "sourceColumn": "FirstName"
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "sourceColumn": "LastName"
+          },
+          {
+            "name": "CampusName",
+            "dataType": "string",
+            "sourceColumn": "CampusName"
+          },
+          {
+            "name": "CampusID",
+            "dataType": "string",
+            "sourceColumn": "CampusID"
+          },
+          {
+            "name": "GradeLevel",
+            "dataType": "int64",
+            "sourceColumn": "GradeLevel"
+          },
+          {
+            "name": "CohortYear",
+            "dataType": "int64",
+            "sourceColumn": "CohortYear"
+          },
+          {
+            "name": "DateOfBirth",
+            "dataType": "dateTime",
+            "sourceColumn": "DateOfBirth"
+          },
+          {
+            "name": "CounselorName",
+            "dataType": "string",
+            "sourceColumn": "CounselorName"
+          },
+          {
+            "name": "EnrollmentStatus",
+            "dataType": "string",
+            "sourceColumn": "EnrollmentStatus"
+          },
+          {
+            "name": "TeacherID",
+            "dataType": "string",
+            "sourceColumn": "TeacherID"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimStudent",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_students.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"LocalStudentID\", type text}, {\"TXUniqueStudentID\", type text}, {\"FirstName\", type text}, {\"LastName\", type text}, {\"CampusName\", type text}, {\"CampusID\", type text}, {\"GradeLevel\", Int64.Type}, {\"CohortYear\", Int64.Type}, {\"DateOfBirth\", type date}, {\"CounselorName\", type text}, {\"EnrollmentStatus\", type text}, {\"TeacherID\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_students.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimStudentDemographics",
+        "columns": [
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "RaceEthnicity",
+            "dataType": "string",
+            "sourceColumn": "RaceEthnicity"
+          },
+          {
+            "name": "Gender",
+            "dataType": "string",
+            "sourceColumn": "Gender"
+          },
+          {
+            "name": "EconomicallyDisadvantaged",
+            "dataType": "boolean",
+            "sourceColumn": "EconomicallyDisadvantaged"
+          },
+          {
+            "name": "EmergentBilingual",
+            "dataType": "boolean",
+            "sourceColumn": "EmergentBilingual"
+          },
+          {
+            "name": "Section504",
+            "dataType": "boolean",
+            "sourceColumn": "Section504"
+          },
+          {
+            "name": "SpecialEdCurrent",
+            "dataType": "boolean",
+            "sourceColumn": "SpecialEdCurrent"
+          },
+          {
+            "name": "SpecialEdFormer",
+            "dataType": "boolean",
+            "sourceColumn": "SpecialEdFormer"
+          },
+          {
+            "name": "HighFocus",
+            "dataType": "boolean",
+            "sourceColumn": "HighFocus"
+          },
+          {
+            "name": "HighlyMobile",
+            "dataType": "boolean",
+            "sourceColumn": "HighlyMobile"
+          },
+          {
+            "name": "FosterCare",
+            "dataType": "boolean",
+            "sourceColumn": "FosterCare"
+          },
+          {
+            "name": "Homeless",
+            "dataType": "boolean",
+            "sourceColumn": "Homeless"
+          },
+          {
+            "name": "Migratory",
+            "dataType": "boolean",
+            "sourceColumn": "Migratory"
+          },
+          {
+            "name": "ContinuouslyEnrolled",
+            "dataType": "boolean",
+            "sourceColumn": "ContinuouslyEnrolled"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimStudentDemographics",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_demographics.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    StandardizedYesNo = Table.TransformColumns(Trimmed, {{\"EconomicallyDisadvantaged\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"EmergentBilingual\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"Section504\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"SpecialEdCurrent\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"SpecialEdFormer\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"HighFocus\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"HighlyMobile\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"FosterCare\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"Homeless\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"Migratory\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"ContinuouslyEnrolled\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}}, null, MissingField.Ignore),",
+                "    Typed = Table.TransformColumnTypes(StandardizedYesNo, {{\"LocalStudentID\", type text}, {\"RaceEthnicity\", type text}, {\"Gender\", type text}, {\"EconomicallyDisadvantaged\", type logical}, {\"EmergentBilingual\", type logical}, {\"Section504\", type logical}, {\"SpecialEdCurrent\", type logical}, {\"SpecialEdFormer\", type logical}, {\"HighFocus\", type logical}, {\"HighlyMobile\", type logical}, {\"FosterCare\", type logical}, {\"Homeless\", type logical}, {\"Migratory\", type logical}, {\"ContinuouslyEnrolled\", type logical}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_demographics.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactAssessmentAttempt",
+        "columns": [
+          {
+            "name": "AssessmentAttemptID",
+            "dataType": "string",
+            "sourceColumn": "AssessmentAttemptID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "AssessmentType",
+            "dataType": "string",
+            "sourceColumn": "AssessmentType"
+          },
+          {
+            "name": "Subject",
+            "dataType": "string",
+            "sourceColumn": "Subject"
+          },
+          {
+            "name": "AssessmentDate",
+            "dataType": "dateTime",
+            "sourceColumn": "AssessmentDate"
+          },
+          {
+            "name": "ScaleScore",
+            "dataType": "int64",
+            "sourceColumn": "ScaleScore"
+          },
+          {
+            "name": "MetCriterion",
+            "dataType": "boolean",
+            "sourceColumn": "MetCriterion"
+          },
+          {
+            "name": "AccommodationUsed",
+            "dataType": "boolean",
+            "sourceColumn": "AccommodationUsed"
+          },
+          {
+            "name": "Administration",
+            "dataType": "string",
+            "sourceColumn": "Administration"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactAssessmentAttempt",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_assessments.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    StandardizedYesNo = Table.TransformColumns(Trimmed, {{\"MetCriterion\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"AccommodationUsed\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}}, null, MissingField.Ignore),",
+                "    Typed = Table.TransformColumnTypes(StandardizedYesNo, {{\"AssessmentAttemptID\", type text}, {\"LocalStudentID\", type text}, {\"AssessmentType\", type text}, {\"Subject\", type text}, {\"AssessmentDate\", type date}, {\"ScaleScore\", Int64.Type}, {\"MetCriterion\", type logical}, {\"AccommodationUsed\", type logical}, {\"Administration\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_assessments.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactSkillPerformance",
+        "columns": [
+          {
+            "name": "SkillRecordID",
+            "dataType": "string",
+            "sourceColumn": "SkillRecordID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "ContentArea",
+            "dataType": "string",
+            "sourceColumn": "ContentArea"
+          },
+          {
+            "name": "SkillName",
+            "dataType": "string",
+            "sourceColumn": "SkillName"
+          },
+          {
+            "name": "EvidenceSource",
+            "dataType": "string",
+            "sourceColumn": "EvidenceSource"
+          },
+          {
+            "name": "PercentMastery",
+            "dataType": "int64",
+            "sourceColumn": "PercentMastery"
+          },
+          {
+            "name": "SkillStatus",
+            "dataType": "string",
+            "sourceColumn": "SkillStatus"
+          },
+          {
+            "name": "RecommendedGroup",
+            "dataType": "string",
+            "sourceColumn": "RecommendedGroup"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactSkillPerformance",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_assessment_skill_detail.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"SkillRecordID\", type text}, {\"LocalStudentID\", type text}, {\"ContentArea\", type text}, {\"SkillName\", type text}, {\"EvidenceSource\", type text}, {\"PercentMastery\", Int64.Type}, {\"SkillStatus\", type text}, {\"RecommendedGroup\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_assessment_skill_detail.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactTranscriptCourse",
+        "columns": [
+          {
+            "name": "TranscriptCourseID",
+            "dataType": "string",
+            "sourceColumn": "TranscriptCourseID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "CourseCode",
+            "dataType": "string",
+            "sourceColumn": "CourseCode"
+          },
+          {
+            "name": "CourseName",
+            "dataType": "string",
+            "sourceColumn": "CourseName"
+          },
+          {
+            "name": "SubjectArea",
+            "dataType": "string",
+            "sourceColumn": "SubjectArea"
+          },
+          {
+            "name": "SchoolYear",
+            "dataType": "int64",
+            "sourceColumn": "SchoolYear"
+          },
+          {
+            "name": "Term",
+            "dataType": "string",
+            "sourceColumn": "Term"
+          },
+          {
+            "name": "CreditsEarned",
+            "dataType": "double",
+            "sourceColumn": "CreditsEarned"
+          },
+          {
+            "name": "FinalGrade",
+            "dataType": "string",
+            "sourceColumn": "FinalGrade"
+          },
+          {
+            "name": "Passed",
+            "dataType": "boolean",
+            "sourceColumn": "Passed"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactTranscriptCourse",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_transcripts.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    StandardizedYesNo = Table.TransformColumns(Trimmed, {{\"Passed\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}}, null, MissingField.Ignore),",
+                "    Typed = Table.TransformColumnTypes(StandardizedYesNo, {{\"TranscriptCourseID\", type text}, {\"LocalStudentID\", type text}, {\"CourseCode\", type text}, {\"CourseName\", type text}, {\"SubjectArea\", type text}, {\"SchoolYear\", Int64.Type}, {\"Term\", type text}, {\"CreditsEarned\", type number}, {\"FinalGrade\", type text}, {\"Passed\", type logical}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_transcripts.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactCurrentSchedule",
+        "columns": [
+          {
+            "name": "ScheduleID",
+            "dataType": "string",
+            "sourceColumn": "ScheduleID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "CourseCode",
+            "dataType": "string",
+            "sourceColumn": "CourseCode"
+          },
+          {
+            "name": "CourseName",
+            "dataType": "string",
+            "sourceColumn": "CourseName"
+          },
+          {
+            "name": "SubjectArea",
+            "dataType": "string",
+            "sourceColumn": "SubjectArea"
+          },
+          {
+            "name": "SchoolYear",
+            "dataType": "int64",
+            "sourceColumn": "SchoolYear"
+          },
+          {
+            "name": "Term",
+            "dataType": "string",
+            "sourceColumn": "Term"
+          },
+          {
+            "name": "TeacherID",
+            "dataType": "string",
+            "sourceColumn": "TeacherID"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactCurrentSchedule",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_current_schedule.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"ScheduleID\", type text}, {\"LocalStudentID\", type text}, {\"CourseCode\", type text}, {\"CourseName\", type text}, {\"SubjectArea\", type text}, {\"SchoolYear\", Int64.Type}, {\"Term\", type text}, {\"TeacherID\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_current_schedule.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactCourseRequest",
+        "columns": [
+          {
+            "name": "RequestID",
+            "dataType": "string",
+            "sourceColumn": "RequestID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "CourseCode",
+            "dataType": "string",
+            "sourceColumn": "CourseCode"
+          },
+          {
+            "name": "CourseName",
+            "dataType": "string",
+            "sourceColumn": "CourseName"
+          },
+          {
+            "name": "SubjectArea",
+            "dataType": "string",
+            "sourceColumn": "SubjectArea"
+          },
+          {
+            "name": "RequestedYear",
+            "dataType": "string",
+            "sourceColumn": "RequestedYear"
+          },
+          {
+            "name": "RequestStatus",
+            "dataType": "string",
+            "sourceColumn": "RequestStatus"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactCourseRequest",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_course_requests.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"RequestID\", type text}, {\"LocalStudentID\", type text}, {\"CourseCode\", type text}, {\"CourseName\", type text}, {\"SubjectArea\", type text}, {\"RequestedYear\", type text}, {\"RequestStatus\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_course_requests.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimProgramOfStudy",
+        "columns": [
+          {
+            "name": "ProgramOfStudyID",
+            "dataType": "string",
+            "sourceColumn": "ProgramOfStudyID"
+          },
+          {
+            "name": "ProgramOfStudyName",
+            "dataType": "string",
+            "sourceColumn": "ProgramOfStudyName"
+          },
+          {
+            "name": "Endorsement",
+            "dataType": "string",
+            "sourceColumn": "Endorsement"
+          },
+          {
+            "name": "Level1Course",
+            "dataType": "string",
+            "sourceColumn": "Level1Course"
+          },
+          {
+            "name": "Level2Course",
+            "dataType": "string",
+            "sourceColumn": "Level2Course"
+          },
+          {
+            "name": "AlignedIBCCode",
+            "dataType": "string",
+            "sourceColumn": "AlignedIBCCode"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimProgramOfStudy",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_cte_programs.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"ProgramOfStudyID\", type text}, {\"ProgramOfStudyName\", type text}, {\"Endorsement\", type text}, {\"Level1Course\", type text}, {\"Level2Course\", type text}, {\"AlignedIBCCode\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_cte_programs.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactCTEProgress",
+        "columns": [
+          {
+            "name": "CTEProgressID",
+            "dataType": "string",
+            "sourceColumn": "CTEProgressID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "ProgramOfStudyID",
+            "dataType": "string",
+            "sourceColumn": "ProgramOfStudyID"
+          },
+          {
+            "name": "HighestLevelCompleted",
+            "dataType": "int64",
+            "sourceColumn": "HighestLevelCompleted"
+          },
+          {
+            "name": "Concentrator",
+            "dataType": "boolean",
+            "sourceColumn": "Concentrator"
+          },
+          {
+            "name": "Completer",
+            "dataType": "boolean",
+            "sourceColumn": "Completer"
+          },
+          {
+            "name": "NextRecommendedCTECourse",
+            "dataType": "string",
+            "sourceColumn": "NextRecommendedCTECourse"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactCTEProgress",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_student_cte_progress.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    StandardizedYesNo = Table.TransformColumns(Trimmed, {{\"Concentrator\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"Completer\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}}, null, MissingField.Ignore),",
+                "    Typed = Table.TransformColumnTypes(StandardizedYesNo, {{\"CTEProgressID\", type text}, {\"LocalStudentID\", type text}, {\"ProgramOfStudyID\", type text}, {\"HighestLevelCompleted\", Int64.Type}, {\"Concentrator\", type logical}, {\"Completer\", type logical}, {\"NextRecommendedCTECourse\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_student_cte_progress.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactIBC",
+        "columns": [
+          {
+            "name": "IBCAttemptID",
+            "dataType": "string",
+            "sourceColumn": "IBCAttemptID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "IBCCode",
+            "dataType": "string",
+            "sourceColumn": "IBCCode"
+          },
+          {
+            "name": "IBCName",
+            "dataType": "string",
+            "sourceColumn": "IBCName"
+          },
+          {
+            "name": "ProgramOfStudyID",
+            "dataType": "string",
+            "sourceColumn": "ProgramOfStudyID"
+          },
+          {
+            "name": "Attempted",
+            "dataType": "boolean",
+            "sourceColumn": "Attempted"
+          },
+          {
+            "name": "Passed",
+            "dataType": "boolean",
+            "sourceColumn": "Passed"
+          },
+          {
+            "name": "Verified",
+            "dataType": "boolean",
+            "sourceColumn": "Verified"
+          },
+          {
+            "name": "AttemptDate",
+            "dataType": "dateTime",
+            "sourceColumn": "AttemptDate"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactIBC",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_ibc.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    StandardizedYesNo = Table.TransformColumns(Trimmed, {{\"Attempted\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"Passed\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}, {\"Verified\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}}, null, MissingField.Ignore),",
+                "    Typed = Table.TransformColumnTypes(StandardizedYesNo, {{\"IBCAttemptID\", type text}, {\"LocalStudentID\", type text}, {\"IBCCode\", type text}, {\"IBCName\", type text}, {\"ProgramOfStudyID\", type text}, {\"Attempted\", type logical}, {\"Passed\", type logical}, {\"Verified\", type logical}, {\"AttemptDate\", type date}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_ibc.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactDualCreditOnRamps",
+        "columns": [
+          {
+            "name": "DualOnRampsID",
+            "dataType": "string",
+            "sourceColumn": "DualOnRampsID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "ProgramType",
+            "dataType": "string",
+            "sourceColumn": "ProgramType"
+          },
+          {
+            "name": "CourseCode",
+            "dataType": "string",
+            "sourceColumn": "CourseCode"
+          },
+          {
+            "name": "Completed",
+            "dataType": "boolean",
+            "sourceColumn": "Completed"
+          },
+          {
+            "name": "CollegeCredits",
+            "dataType": "int64",
+            "sourceColumn": "CollegeCredits"
+          },
+          {
+            "name": "CompletionDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CompletionDate"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactDualCreditOnRamps",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_dual_credit_onramps.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    StandardizedYesNo = Table.TransformColumns(Trimmed, {{\"Completed\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}}, null, MissingField.Ignore),",
+                "    Typed = Table.TransformColumnTypes(StandardizedYesNo, {{\"DualOnRampsID\", type text}, {\"LocalStudentID\", type text}, {\"ProgramType\", type text}, {\"CourseCode\", type text}, {\"Completed\", type logical}, {\"CollegeCredits\", Int64.Type}, {\"CompletionDate\", type date}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_dual_credit_onramps.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactCounselorNote",
+        "columns": [
+          {
+            "name": "NoteID",
+            "dataType": "string",
+            "sourceColumn": "NoteID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "StudentName",
+            "dataType": "string",
+            "sourceColumn": "StudentName"
+          },
+          {
+            "name": "CreatedBy",
+            "dataType": "string",
+            "sourceColumn": "CreatedBy"
+          },
+          {
+            "name": "CreatedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CreatedDate"
+          },
+          {
+            "name": "NoteType",
+            "dataType": "string",
+            "sourceColumn": "NoteType"
+          },
+          {
+            "name": "NoteText",
+            "dataType": "string",
+            "sourceColumn": "NoteText"
+          },
+          {
+            "name": "PrimaryPathway",
+            "dataType": "string",
+            "sourceColumn": "PrimaryPathway"
+          },
+          {
+            "name": "BackupPathway",
+            "dataType": "string",
+            "sourceColumn": "BackupPathway"
+          },
+          {
+            "name": "RecommendedCourse",
+            "dataType": "string",
+            "sourceColumn": "RecommendedCourse"
+          },
+          {
+            "name": "RecommendedAssessment",
+            "dataType": "string",
+            "sourceColumn": "RecommendedAssessment"
+          },
+          {
+            "name": "Barrier",
+            "dataType": "string",
+            "sourceColumn": "Barrier"
+          },
+          {
+            "name": "FollowUpDate",
+            "dataType": "dateTime",
+            "sourceColumn": "FollowUpDate"
+          },
+          {
+            "name": "ActionStatus",
+            "dataType": "string",
+            "sourceColumn": "ActionStatus"
+          },
+          {
+            "name": "ActionOwner",
+            "dataType": "string",
+            "sourceColumn": "ActionOwner"
+          },
+          {
+            "name": "ConfidentialFlag",
+            "dataType": "string",
+            "sourceColumn": "ConfidentialFlag"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactCounselorNote",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_counselor_notes.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"NoteID\", type text}, {\"LocalStudentID\", type text}, {\"StudentName\", type text}, {\"CreatedBy\", type text}, {\"CreatedDate\", type date}, {\"NoteType\", type text}, {\"NoteText\", type text}, {\"PrimaryPathway\", type text}, {\"BackupPathway\", type text}, {\"RecommendedCourse\", type text}, {\"RecommendedAssessment\", type text}, {\"Barrier\", type text}, {\"FollowUpDate\", type date}, {\"ActionStatus\", type text}, {\"ActionOwner\", type text}, {\"ConfidentialFlag\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_counselor_notes.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactInterventionAssignment",
+        "columns": [
+          {
+            "name": "InterventionID",
+            "dataType": "string",
+            "sourceColumn": "InterventionID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "ContentArea",
+            "dataType": "string",
+            "sourceColumn": "ContentArea"
+          },
+          {
+            "name": "SkillName",
+            "dataType": "string",
+            "sourceColumn": "SkillName"
+          },
+          {
+            "name": "RecommendedIntervention",
+            "dataType": "string",
+            "sourceColumn": "RecommendedIntervention"
+          },
+          {
+            "name": "ProgressMonitor",
+            "dataType": "string",
+            "sourceColumn": "ProgressMonitor"
+          },
+          {
+            "name": "ExitCriterion",
+            "dataType": "string",
+            "sourceColumn": "ExitCriterion"
+          },
+          {
+            "name": "RetestRecommended",
+            "dataType": "boolean",
+            "sourceColumn": "RetestRecommended"
+          },
+          {
+            "name": "AssignedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "AssignedDate"
+          },
+          {
+            "name": "NextProgressMonitorDate",
+            "dataType": "dateTime",
+            "sourceColumn": "NextProgressMonitorDate"
+          },
+          {
+            "name": "InterventionStatus",
+            "dataType": "string",
+            "sourceColumn": "InterventionStatus"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactInterventionAssignment",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_interventions.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    StandardizedYesNo = Table.TransformColumns(Trimmed, {{\"RetestRecommended\", each if _ = true or Text.Upper(Text.From(_)) = \"YES\" or Text.Upper(Text.From(_)) = \"TRUE\" or Text.From(_) = \"1\" then true else if _ = false or Text.Upper(Text.From(_)) = \"NO\" or Text.Upper(Text.From(_)) = \"FALSE\" or Text.From(_) = \"0\" then false else null, type logical}}, null, MissingField.Ignore),",
+                "    Typed = Table.TransformColumnTypes(StandardizedYesNo, {{\"InterventionID\", type text}, {\"LocalStudentID\", type text}, {\"ContentArea\", type text}, {\"SkillName\", type text}, {\"RecommendedIntervention\", type text}, {\"ProgressMonitor\", type text}, {\"ExitCriterion\", type text}, {\"RetestRecommended\", type logical}, {\"AssignedDate\", type date}, {\"NextProgressMonitorDate\", type date}, {\"InterventionStatus\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_interventions.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimCCMRRule",
+        "columns": [
+          {
+            "name": "RuleID",
+            "dataType": "string",
+            "sourceColumn": "RuleID"
+          },
+          {
+            "name": "AssessmentType",
+            "dataType": "string",
+            "sourceColumn": "AssessmentType"
+          },
+          {
+            "name": "Subject",
+            "dataType": "string",
+            "sourceColumn": "Subject"
+          },
+          {
+            "name": "Metric",
+            "dataType": "string",
+            "sourceColumn": "Metric"
+          },
+          {
+            "name": "CutScore",
+            "dataType": "int64",
+            "sourceColumn": "CutScore"
+          },
+          {
+            "name": "SecondaryCriterion",
+            "dataType": "string",
+            "sourceColumn": "SecondaryCriterion"
+          },
+          {
+            "name": "PathwayCategory",
+            "dataType": "string",
+            "sourceColumn": "PathwayCategory"
+          },
+          {
+            "name": "RuleWeight",
+            "dataType": "string",
+            "sourceColumn": "RuleWeight"
+          },
+          {
+            "name": "ActiveStartYear",
+            "dataType": "int64",
+            "sourceColumn": "ActiveStartYear"
+          },
+          {
+            "name": "ActiveEndYear",
+            "dataType": "int64",
+            "sourceColumn": "ActiveEndYear"
+          },
+          {
+            "name": "RuleStatus",
+            "dataType": "string",
+            "sourceColumn": "RuleStatus"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimCCMRRule",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_ccmr_rules.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"RuleID\", type text}, {\"AssessmentType\", type text}, {\"Subject\", type text}, {\"Metric\", type text}, {\"CutScore\", Int64.Type}, {\"SecondaryCriterion\", type text}, {\"PathwayCategory\", type text}, {\"RuleWeight\", type text}, {\"ActiveStartYear\", Int64.Type}, {\"ActiveEndYear\", Int64.Type}, {\"RuleStatus\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_ccmr_rules.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimIntervention",
+        "columns": [
+          {
+            "name": "ContentArea",
+            "dataType": "string",
+            "sourceColumn": "ContentArea"
+          },
+          {
+            "name": "SkillName",
+            "dataType": "string",
+            "sourceColumn": "SkillName"
+          },
+          {
+            "name": "EvidenceSource",
+            "dataType": "string",
+            "sourceColumn": "EvidenceSource"
+          },
+          {
+            "name": "RecommendedIntervention",
+            "dataType": "string",
+            "sourceColumn": "RecommendedIntervention"
+          },
+          {
+            "name": "ProgressMonitor",
+            "dataType": "string",
+            "sourceColumn": "ProgressMonitor"
+          },
+          {
+            "name": "ExitCriterion",
+            "dataType": "string",
+            "sourceColumn": "ExitCriterion"
+          },
+          {
+            "name": "RetestRecommendation",
+            "dataType": "string",
+            "sourceColumn": "RetestRecommendation"
+          },
+          {
+            "name": "SuggestedInterventionGroup",
+            "dataType": "string",
+            "sourceColumn": "SuggestedInterventionGroup"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimIntervention",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_intervention_map.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"ContentArea\", type text}, {\"SkillName\", type text}, {\"EvidenceSource\", type text}, {\"RecommendedIntervention\", type text}, {\"ProgressMonitor\", type text}, {\"ExitCriterion\", type text}, {\"RetestRecommendation\", type text}, {\"SuggestedInterventionGroup\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_intervention_map.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactAttendance",
+        "columns": [
+          {
+            "name": "AttendanceID",
+            "dataType": "string",
+            "sourceColumn": "AttendanceID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "SchoolYear",
+            "dataType": "int64",
+            "sourceColumn": "SchoolYear"
+          },
+          {
+            "name": "DaysEnrolled",
+            "dataType": "int64",
+            "sourceColumn": "DaysEnrolled"
+          },
+          {
+            "name": "DaysAbsent",
+            "dataType": "int64",
+            "sourceColumn": "DaysAbsent"
+          },
+          {
+            "name": "AttendanceRate",
+            "dataType": "double",
+            "sourceColumn": "AttendanceRate"
+          },
+          {
+            "name": "AttendanceConcern",
+            "dataType": "string",
+            "sourceColumn": "AttendanceConcern"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactAttendance",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_attendance.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"AttendanceID\", type text}, {\"LocalStudentID\", type text}, {\"SchoolYear\", Int64.Type}, {\"DaysEnrolled\", Int64.Type}, {\"DaysAbsent\", Int64.Type}, {\"AttendanceRate\", type number}, {\"AttendanceConcern\", type text}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_attendance.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactDiscipline",
+        "columns": [
+          {
+            "name": "DisciplineID",
+            "dataType": "string",
+            "sourceColumn": "DisciplineID"
+          },
+          {
+            "name": "LocalStudentID",
+            "dataType": "string",
+            "sourceColumn": "LocalStudentID"
+          },
+          {
+            "name": "IncidentDate",
+            "dataType": "dateTime",
+            "sourceColumn": "IncidentDate"
+          },
+          {
+            "name": "IncidentType",
+            "dataType": "string",
+            "sourceColumn": "IncidentType"
+          },
+          {
+            "name": "Severity",
+            "dataType": "string",
+            "sourceColumn": "Severity"
+          },
+          {
+            "name": "DaysRemoved",
+            "dataType": "int64",
+            "sourceColumn": "DaysRemoved"
+          },
+          {
+            "name": "SourceFileName",
+            "dataType": "string",
+            "sourceColumn": "SourceFileName"
+          },
+          {
+            "name": "RefreshTimestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "RefreshTimestamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactDiscipline",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(pDataFolder & \"synthetic_discipline.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Trimmed = Table.TransformColumns(PromotedHeaders, List.Transform(Table.Columns(PromotedHeaders), (c) => {c, each if _ is text then Text.Trim(_) else _, type any})),",
+                "    Typed = Table.TransformColumnTypes(Trimmed, {{\"DisciplineID\", type text}, {\"LocalStudentID\", type text}, {\"IncidentDate\", type date}, {\"IncidentType\", type text}, {\"Severity\", type text}, {\"DaysRemoved\", Int64.Type}}, \"en-US\"),",
+                "    WithSourceFile = Table.AddColumn(Typed, \"SourceFileName\", each \"synthetic_discipline.csv\", type text),",
+                "    WithRefreshTimestamp = Table.AddColumn(WithSourceFile, \"RefreshTimestamp\", each DateTimeZone.UtcNow(), type datetimezone)",
+                "in",
+                "    WithRefreshTimestamp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimDate",
+        "columns": [],
+        "partitions": [
+          {
+            "name": "DimDate",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "CALENDAR ( DATE ( 2023, 7, 1 ), DATE ( 2028, 8, 31 ) )"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimAssessment",
+        "columns": [],
+        "partitions": [
+          {
+            "name": "DimAssessment",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "SUMMARIZE ( FactAssessmentAttempt, FactAssessmentAttempt[AssessmentType], FactAssessmentAttempt[Subject] )"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimCourse",
+        "columns": [],
+        "partitions": [
+          {
+            "name": "DimCourse",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "DISTINCT ( UNION ( SELECTCOLUMNS ( FactTranscriptCourse, \"CourseCode\", FactTranscriptCourse[CourseCode], \"CourseName\", FactTranscriptCourse[CourseName], \"SubjectArea\", FactTranscriptCourse[SubjectArea] ), SELECTCOLUMNS ( FactCurrentSchedule, \"CourseCode\", FactCurrentSchedule[CourseCode], \"CourseName\", FactCurrentSchedule[CourseName], \"SubjectArea\", FactCurrentSchedule[SubjectArea] ), SELECTCOLUMNS ( FactCourseRequest, \"CourseCode\", FactCourseRequest[CourseCode], \"CourseName\", FactCourseRequest[CourseName], \"SubjectArea\", FactCourseRequest[SubjectArea] ) ) )"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimCampus",
+        "columns": [],
+        "partitions": [
+          {
+            "name": "DimCampus",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "SUMMARIZE ( DimStudent, DimStudent[CampusID], DimStudent[CampusName] )"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimCounselor",
+        "columns": [],
+        "partitions": [
+          {
+            "name": "DimCounselor",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "DISTINCT ( SELECTCOLUMNS ( DimStudent, \"CounselorName\", DimStudent[CounselorName] ) )"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimPathway",
+        "columns": [],
+        "partitions": [
+          {
+            "name": "DimPathway",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "DATATABLE ( \"Pathway\", STRING, \"PathwayCategory\", STRING, { { \"SAT\", \"College Assessment\" }, { \"ACT\", \"College Assessment\" }, { \"TSIA2\", \"TSIA\" }, { \"AP\", \"Advanced Academics\" }, { \"IB\", \"Advanced Academics\" }, { \"Dual Credit\", \"College Coursework\" }, { \"OnRamps\", \"College Coursework\" }, { \"CTE + IBC\", \"Career\" }, { \"Military\", \"Military\" }, { \"SPED Alternative\", \"Special Programs\" } } )"
+            }
+          }
+        ]
+      },
+      {
+        "name": "FactCCMRStatus",
+        "columns": [],
+        "partitions": [
+          {
+            "name": "FactCCMRStatus",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "SELECTCOLUMNS ( FILTER ( FactAssessmentAttempt, FactAssessmentAttempt[MetCriterion] = TRUE() ), \"LocalStudentID\", FactAssessmentAttempt[LocalStudentID], \"Pathway\", FactAssessmentAttempt[AssessmentType], \"EvidenceVerified\", TRUE(), \"RecommendationBucket\", \"Already CCMR-met\" )"
+            }
+          }
+        ]
+      },
+      {
+        "name": "_Measures",
+        "columns": [
+          {
+            "name": "MeasureTable",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "MeasureTable"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "_Measures",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "DATATABLE ( \"MeasureTable\", STRING, { { \"Measures\" } } )"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Students",
+            "expression": "DISTINCTCOUNT ( DimStudent[LocalStudentID] )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Active Students",
+            "expression": "CALCULATE ( [Total Students], DimStudent[EnrollmentStatus] = \"Active\" )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Seniors",
+            "expression": "CALCULATE ( [Total Students], DimStudent[GradeLevel] = 12 )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Juniors",
+            "expression": "CALCULATE ( [Total Students], DimStudent[GradeLevel] = 11 )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Sophomores",
+            "expression": "CALCULATE ( [Total Students], DimStudent[GradeLevel] = 10 )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Freshmen",
+            "expression": "CALCULATE ( [Total Students], DimStudent[GradeLevel] = 9 )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "CCMR Met Count",
+            "expression": "DISTINCTCOUNT ( FactCCMRStatus[LocalStudentID] )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "CCMR Not Met Count",
+            "expression": "[Total Students] - [CCMR Met Count]",
+            "formatString": "#,0"
+          },
+          {
+            "name": "CCMR Met %",
+            "expression": "DIVIDE ( [CCMR Met Count], [Total Students] )",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Notes Count",
+            "expression": "COUNTROWS ( FactCounselorNote )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Open Actions Count",
+            "expression": "CALCULATE ( COUNTROWS ( FactCounselorNote ), FactCounselorNote[ActionStatus] = \"Open\" )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Overdue Actions Count",
+            "expression": "CALCULATE ( COUNTROWS ( FactCounselorNote ), FactCounselorNote[ActionStatus] = \"Open\", FactCounselorNote[FollowUpDate] < TODAY() )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Students Assigned Intervention",
+            "expression": "DISTINCTCOUNT ( FactInterventionAssignment[LocalStudentID] )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Retest Ready Count",
+            "expression": "CALCULATE ( DISTINCTCOUNT ( FactInterventionAssignment[LocalStudentID] ), FactInterventionAssignment[RetestRecommended] = TRUE() )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "CTE Students Count",
+            "expression": "DISTINCTCOUNT ( FactCTEProgress[LocalStudentID] )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Completer Count",
+            "expression": "CALCULATE ( DISTINCTCOUNT ( FactCTEProgress[LocalStudentID] ), FactCTEProgress[Completer] = TRUE() )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "IBC Passed Count",
+            "expression": "CALCULATE ( DISTINCTCOUNT ( FactIBC[LocalStudentID] ), FactIBC[Passed] = TRUE() )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "IBC Verified Count",
+            "expression": "CALCULATE ( DISTINCTCOUNT ( FactIBC[LocalStudentID] ), FactIBC[Verified] = TRUE() )",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Data Quality Score",
+            "expression": "1 - DIVIDE ( [Missing LocalStudentID Count], [Total Students] )",
+            "formatString": "0.00%;-0.00%;0.00%"
+          },
+          {
+            "name": "Missing LocalStudentID Count",
+            "expression": "COUNTROWS ( FILTER ( DimStudent, ISBLANK ( DimStudent[LocalStudentID] ) ) )",
+            "formatString": "#,0"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "columns": [],
+        "partitions": [
+          {
+            "name": "Security",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "DATATABLE ( \"UserEmail\", STRING, \"Role\", STRING, \"CampusID\", STRING, \"CounselorName\", STRING, \"TeacherID\", STRING, \"ProgramAccess\", STRING, \"CanViewNotes\", BOOLEAN, \"CanViewSensitiveFlags\", BOOLEAN, { { \"district.leader@example.org\", \"District\", \"001\", \"\", \"\", \"All\", TRUE, TRUE }, { \"counselor.nguyen@example.org\", \"Counselor\", \"001\", \"A. Nguyen\", \"\", \"All\", TRUE, TRUE } } )"
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "r_DimStudent_DimStudentDemographics",
+        "fromTable": "DimStudentDemographics",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactAssessmentAttempt",
+        "fromTable": "FactAssessmentAttempt",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactSkillPerformance",
+        "fromTable": "FactSkillPerformance",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactTranscriptCourse",
+        "fromTable": "FactTranscriptCourse",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactCurrentSchedule",
+        "fromTable": "FactCurrentSchedule",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactCourseRequest",
+        "fromTable": "FactCourseRequest",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactCTEProgress",
+        "fromTable": "FactCTEProgress",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactIBC",
+        "fromTable": "FactIBC",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactDualCreditOnRamps",
+        "fromTable": "FactDualCreditOnRamps",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactCounselorNote",
+        "fromTable": "FactCounselorNote",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactInterventionAssignment",
+        "fromTable": "FactInterventionAssignment",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactAttendance",
+        "fromTable": "FactAttendance",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactDiscipline",
+        "fromTable": "FactDiscipline",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimStudent_FactCCMRStatus",
+        "fromTable": "FactCCMRStatus",
+        "fromColumn": "LocalStudentID",
+        "toTable": "DimStudent",
+        "toColumn": "LocalStudentID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimProgramOfStudy_FactCTEProgress",
+        "fromTable": "FactCTEProgress",
+        "fromColumn": "ProgramOfStudyID",
+        "toTable": "DimProgramOfStudy",
+        "toColumn": "ProgramOfStudyID",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "r_DimProgramOfStudy_FactIBC",
+        "fromTable": "FactIBC",
+        "fromColumn": "ProgramOfStudyID",
+        "toTable": "DimProgramOfStudy",
+        "toColumn": "ProgramOfStudyID",
+        "crossFilteringBehavior": "oneDirection"
+      }
+    ],
+    "roles": [
+      {
+        "name": "District Leaders",
+        "modelPermission": "read",
+        "members": [],
+        "tablePermissions": []
+      },
+      {
+        "name": "Campus Principal",
+        "modelPermission": "read",
+        "members": [],
+        "tablePermissions": [
+          {
+            "name": "DimStudent",
+            "filterExpression": "DimStudent[CampusID] IN VALUES ( Security[CampusID] )"
+          }
+        ]
+      },
+      {
+        "name": "Counselor",
+        "modelPermission": "read",
+        "members": [],
+        "tablePermissions": [
+          {
+            "name": "DimStudent",
+            "filterExpression": "DimStudent[CounselorName] IN VALUES ( Security[CounselorName] )"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[]"
+      }
+    ]
+  }
+}
