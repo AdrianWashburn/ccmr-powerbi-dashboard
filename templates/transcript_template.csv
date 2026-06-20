@@ -1,0 +1,21 @@
+TranscriptCourseID,LocalStudentID,CourseCode,CourseName,SubjectArea,SchoolYear,Term,CreditsEarned,FinalGrade,Passed
+TR0000,S10000,ENG1,English I,ELA,2023,S1,0.5,A,Yes
+TR0001,S10000,ENG2,English II,ELA,2024,S2,0.5,B,Yes
+TR0002,S10000,ALG1,Algebra I,Math,2025,S1,0.5,B,Yes
+TR0003,S10000,GEOM,Geometry,Math,2026,S2,0.5,B,Yes
+TR0010,S10001,ENG2,English II,ELA,2023,S1,0.5,B,Yes
+TR0011,S10001,ALG1,Algebra I,Math,2024,S2,0.5,B,Yes
+TR0012,S10001,GEOM,Geometry,Math,2025,S1,0.5,B,Yes
+TR0013,S10001,BIO,Biology,Science,2026,S2,0.5,A,Yes
+TR0020,S10002,ALG1,Algebra I,Math,2023,S1,0.5,B,Yes
+TR0021,S10002,GEOM,Geometry,Math,2024,S2,0.5,B,Yes
+TR0022,S10002,BIO,Biology,Science,2025,S1,0.5,A,Yes
+TR0023,S10002,BUS1,Principles of Business,CTE,2026,S2,0.5,B,Yes
+TR0030,S10003,GEOM,Geometry,Math,2023,S1,0.5,B,Yes
+TR0031,S10003,BIO,Biology,Science,2024,S2,0.5,A,Yes
+TR0032,S10003,BUS1,Principles of Business,CTE,2025,S1,0.5,B,Yes
+TR0033,S10003,HLTH1,Principles of Health Science,CTE,2026,S2,0.5,B,Yes
+TR0040,S10004,BIO,Biology,Science,2023,S1,0.5,A,Yes
+TR0041,S10004,BUS1,Principles of Business,CTE,2024,S2,0.5,B,Yes
+TR0042,S10004,HLTH1,Principles of Health Science,CTE,2025,S1,0.5,B,Yes
+TR0043,S10004,IT1,Principles of IT,CTE,2026,S2,0.5,B,Yes

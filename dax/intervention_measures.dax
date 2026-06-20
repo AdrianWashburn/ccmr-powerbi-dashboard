@@ -1,0 +1,8 @@
+-- Configuration-driven examples. Replace FactCCMRStatus with calculated status table if materialized.
+Students Assigned Intervention = /* Students Assigned Intervention: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Intervention Completion % = DIVIDE([Intervention Completion Count], [Total Students])
+Intervention Exit Criteria Met Count = /* Intervention Exit Criteria Met Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+ELA Intervention Count = /* ELA Intervention Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Math Intervention Count = /* Math Intervention Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Overdue Progress Monitor Count = /* Overdue Progress Monitor Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Retest Ready Count = /* Retest Ready Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])

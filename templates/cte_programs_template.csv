@@ -1,0 +1,6 @@
+ProgramOfStudyID,ProgramOfStudyName,Endorsement,Level1Course,Level2Course,AlignedIBCCode
+POS1,Business Management,Endorsement 1,L1A,L1B,IBC1
+POS2,Health Science,Endorsement 2,L2A,L2B,IBC2
+POS3,Information Technology,Endorsement 3,L3A,L3B,IBC3
+POS4,Education and Training,Endorsement 4,L4A,L4B,IBC4
+POS5,Manufacturing,Endorsement 5,L5A,L5B,IBC5

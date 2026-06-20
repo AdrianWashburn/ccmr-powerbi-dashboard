@@ -1,0 +1,11 @@
+-- Configuration-driven examples. Replace FactCCMRStatus with calculated status table if materialized.
+ELA TSI Met Count = /* ELA TSI Met Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Math TSI Met Count = /* Math TSI Met Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Both TSI Met Count = /* Both TSI Met Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+ELA Only Needed Count = /* ELA Only Needed Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Math Only Needed Count = /* Math Only Needed Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Both Needed Count = /* Both Needed Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Near ELA Cut Count = /* Near ELA Cut Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Near Math Cut Count = /* Near Math Cut Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Far Below ELA Count = /* Far Below ELA Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Far Below Math Count = /* Far Below Math Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])

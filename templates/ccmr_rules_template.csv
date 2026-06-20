@@ -1,0 +1,7 @@
+RuleID,AssessmentType,Subject,Metric,CutScore,SecondaryCriterion,PathwayCategory,RuleWeight,ActiveStartYear,ActiveEndYear,RuleStatus
+R-SAT-ELA,SAT,ELA,EBRW,480,,College Assessment,High,2025,2027,Active
+R-SAT-MATH,SAT,Math,Math,530,,College Assessment,High,2025,2027,Active
+R-TSIA-ELA,TSIA2,ELA,ELAR CRC,945,Diagnostic 5 and Essay 5,TSIA,High,2025,2027,Active
+R-TSIA-MATH,TSIA2,Math,Math CRC,950,,TSIA,High,2025,2027,Active
+R-AP,AP,Any,Exam,3,,Advanced Academics,Medium,2025,2027,Active
+R-CTE-IBC,IBC,CTE,Verified,1,Completer required,Career,High,2025,2027,Active

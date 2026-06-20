@@ -1,0 +1,16 @@
+LocalStudentID,RaceEthnicity,Gender,EconomicallyDisadvantaged,EmergentBilingual,Section504,SpecialEdCurrent,SpecialEdFormer,HighFocus,HighlyMobile,FosterCare,Homeless,Migratory,ContinuouslyEnrolled
+S10000,Hispanic/Latino,F,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+S10001,White,M,No,No,No,No,No,No,No,No,No,No,No
+S10002,Black/African American,F,No,No,No,No,No,No,No,No,No,No,No
+S10003,Asian,M,Yes,No,No,No,No,No,No,No,No,No,No
+S10004,Two or More,F,No,No,No,No,No,No,No,No,No,No,No
+S10005,Hispanic/Latino,M,No,No,No,No,No,Yes,No,No,No,No,No
+S10006,White,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10007,Black/African American,M,No,Yes,No,No,No,No,No,No,No,No,No
+S10008,Asian,F,No,No,No,No,No,No,No,No,No,No,No
+S10009,Two or More,M,Yes,No,No,No,No,No,No,No,No,No,No
+S10010,Hispanic/Latino,F,No,No,No,No,No,Yes,No,No,No,No,No
+S10011,White,M,No,No,Yes,No,No,No,No,No,No,No,No
+S10012,Black/African American,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10013,Asian,M,No,No,No,Yes,No,No,No,No,No,No,No
+S10014,Two or More,F,No,Yes,No,No,No,No,No,No,No,No,No

@@ -1,0 +1,16 @@
+NoteID,LocalStudentID,StudentName,CreatedBy,CreatedDate,NoteType,NoteText,PrimaryPathway,BackupPathway,RecommendedCourse,RecommendedAssessment,Barrier,FollowUpDate,ActionStatus,ActionOwner,ConfidentialFlag
+N000,S10000,Avery Garcia,A. Nguyen,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,Attendance,2025-06-01,Completed,A. Nguyen,No
+N001,S10001,Jordan Brown,B. Patel,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-02,Open,B. Patel,No
+N002,S10002,Riley Miller,C. Williams,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-03,Open,C. Williams,No
+N003,S10003,Mateo Lopez,D. Garcia,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-04,Open,D. Garcia,No
+N004,S10004,Sofia Thomas,E. Johnson,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-05,Completed,E. Johnson,No
+N005,S10005,Noah Jackson,A. Nguyen,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-06,Open,A. Nguyen,No
+N006,S10006,Emma Perez,B. Patel,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,Attendance,2025-06-07,Open,B. Patel,No
+N007,S10007,Liam Johnson,C. Williams,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-08,Open,C. Williams,No
+N008,S10008,Mia Davis,D. Garcia,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-09,Completed,D. Garcia,No
+N009,S10009,Ethan Hernandez,E. Johnson,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-10,Open,E. Johnson,No
+N010,S10010,Olivia Gonzalez,A. Nguyen,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-11,Open,A. Nguyen,No
+N011,S10011,Diego Taylor,B. Patel,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-12,Open,B. Patel,No
+N012,S10012,Camila Martin,C. Williams,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,Attendance,2025-06-13,Completed,C. Williams,No
+N013,S10013,Jayden Thompson,D. Garcia,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-14,Open,D. Garcia,No
+N014,S10014,Isabella Martinez,E. Johnson,2025-05-01,Conference,Reviewed CCMR pathway,SAT,CTE,Next math course,TSIA2 Math,None,2025-06-15,Open,E. Johnson,No

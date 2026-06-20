@@ -1,0 +1,13 @@
+-- Configuration-driven examples. Replace FactCCMRStatus with calculated status table if materialized.
+SAT Pathway Count = /* SAT Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+ACT Pathway Count = /* ACT Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+TSIA Pathway Count = /* TSIA Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+AP Pathway Count = /* AP Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+IB Pathway Count = /* IB Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Dual Credit Pathway Count = /* Dual Credit Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+OnRamps Pathway Count = /* OnRamps Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+College Prep Course Pathway Count = /* College Prep Course Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CTE + IBC Pathway Count = /* CTE + IBC Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Military Pathway Count = /* Military Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+SPED Alternative Pathway Count = /* SPED Alternative Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Multiple Pathways Count = /* Multiple Pathways Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])

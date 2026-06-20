@@ -1,0 +1,16 @@
+CTEProgressID,LocalStudentID,ProgramOfStudyID,HighestLevelCompleted,Concentrator,Completer,NextRecommendedCTECourse
+CTE000,S10000,POS1,1,Yes,Yes,Next CTE Level 1
+CTE001,S10001,POS2,2,No,No,Next CTE Level 2
+CTE002,S10002,POS3,3,No,No,Next CTE Level 3
+CTE003,S10003,POS4,4,Yes,No,Next CTE Level 4
+CTE004,S10004,POS5,1,No,No,Next CTE Level 1
+CTE005,S10005,POS1,2,No,Yes,Next CTE Level 2
+CTE006,S10006,POS2,3,Yes,No,Next CTE Level 3
+CTE007,S10007,POS3,4,No,No,Next CTE Level 4
+CTE008,S10008,POS4,1,No,No,Next CTE Level 1
+CTE009,S10009,POS5,2,Yes,No,Next CTE Level 2
+CTE010,S10010,POS1,3,No,Yes,Next CTE Level 3
+CTE011,S10011,POS2,4,No,No,Next CTE Level 4
+CTE012,S10012,POS3,1,Yes,No,Next CTE Level 1
+CTE013,S10013,POS4,2,No,No,Next CTE Level 2
+CTE014,S10014,POS5,3,No,No,Next CTE Level 3

@@ -1,0 +1,16 @@
+RequestID,LocalStudentID,CourseCode,CourseName,SubjectArea,RequestedYear,RequestStatus
+RQ000,S10000,GEOM,Geometry,Math,2026-2027,Recommended
+RQ001,S10001,BIO,Biology,Science,2026-2027,Requested
+RQ002,S10002,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ003,S10003,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ004,S10004,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ005,S10005,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ006,S10006,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ007,S10007,ENG1,English I,ELA,2026-2027,Requested
+RQ008,S10008,ENG2,English II,ELA,2026-2027,Recommended
+RQ009,S10009,ALG1,Algebra I,Math,2026-2027,Requested
+RQ010,S10010,GEOM,Geometry,Math,2026-2027,Recommended
+RQ011,S10011,BIO,Biology,Science,2026-2027,Requested
+RQ012,S10012,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ013,S10013,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ014,S10014,IT1,Principles of IT,CTE,2026-2027,Recommended

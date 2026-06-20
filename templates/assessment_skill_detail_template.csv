@@ -1,0 +1,21 @@
+SkillRecordID,LocalStudentID,ContentArea,SkillName,EvidenceSource,PercentMastery,SkillStatus,RecommendedGroup
+SK0000,S10000,ELA,Main idea and author purpose,SAT/TSIA/STAAR,45,Gap,Small group
+SK0001,S10000,Math,Linear equations,SAT/TSIA/STAAR,58,Gap,Small group
+SK0010,S10001,ELA,Inference and evidence,SAT/TSIA/STAAR,52,Gap,Small group
+SK0011,S10001,Math,Systems of equations,SAT/TSIA/STAAR,65,Gap,Small group
+SK0020,S10002,ELA,Vocabulary in context,SAT/TSIA/STAAR,59,Gap,Small group
+SK0021,S10002,Math,Functions,SAT/TSIA/STAAR,72,Gap,Extension
+SK0030,S10003,ELA,Paired passage analysis,SAT/TSIA/STAAR,66,Gap,Small group
+SK0031,S10003,Math,Geometry and measurement,SAT/TSIA/STAAR,79,Strength,Extension
+SK0040,S10004,ELA,Revision and organization,SAT/TSIA/STAAR,73,Gap,Extension
+SK0041,S10004,Math,Data analysis,SAT/TSIA/STAAR,86,Strength,Extension
+SK0050,S10005,ELA,Editing and conventions,SAT/TSIA/STAAR,80,Strength,Extension
+SK0051,S10005,Math,Probability/statistics,SAT/TSIA/STAAR,93,Strength,Extension
+SK0060,S10006,ELA,Sentence structure,SAT/TSIA/STAAR,87,Strength,Extension
+SK0061,S10006,Math,Quadratics,SAT/TSIA/STAAR,45,Gap,Small group
+SK0070,S10007,ELA,Development of ideas,SAT/TSIA/STAAR,94,Strength,Extension
+SK0071,S10007,Math,Algebraic expressions,SAT/TSIA/STAAR,52,Gap,Small group
+SK0080,S10008,ELA,Written composition,SAT/TSIA/STAAR,46,Gap,Small group
+SK0081,S10008,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,59,Gap,Small group
+SK0090,S10009,ELA,Argument analysis,SAT/TSIA/STAAR,53,Gap,Small group
+SK0091,S10009,Math,Multi-step problem solving,SAT/TSIA/STAAR,66,Gap,Small group
