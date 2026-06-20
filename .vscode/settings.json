@@ -1,0 +1,28 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "*.pbip"
+      ],
+      "url": "https://raw.githubusercontent.com/microsoft/powerbi-desktop-samples/main/item-schemas/common/pbip.json"
+    },
+    {
+      "fileMatch": [
+        "*.pbir"
+      ],
+      "url": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json"
+    },
+    {
+      "fileMatch": [
+        "*.pbism"
+      ],
+      "url": "https://developer.microsoft.com/json-schemas/fabric/item/semanticModel/definitionProperties/1.0.0/schema.json"
+    },
+    {
+      "fileMatch": [
+        "model.bim"
+      ],
+      "url": "https://raw.githubusercontent.com/microsoft/Analysis-Services/master/schemas/tmsl/tmsl-model-schema.json"
+    }
+  ]
+}

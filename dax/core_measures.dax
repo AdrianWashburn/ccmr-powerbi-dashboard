@@ -1,0 +1,10 @@
+-- CCMR Pathway Navigator measures. Create in a dedicated Measures table.
+Total Students = DISTINCTCOUNT(DimStudent[LocalStudentID])
+Active Students = CALCULATE([Total Students], DimStudent[EnrollmentStatus] = "Active")
+Seniors = CALCULATE([Total Students], DimStudent[GradeLevel] = 12)
+Juniors = CALCULATE([Total Students], DimStudent[GradeLevel] = 11)
+Sophomores = CALCULATE([Total Students], DimStudent[GradeLevel] = 10)
+Freshmen = CALCULATE([Total Students], DimStudent[GradeLevel] = 9)
+Students by Cohort = [Total Students]
+Students with Missing Data = [Missing Counselor Count] + [Missing Cohort Count] + [Missing Demographic Data Count]
+Data Quality Score = MAX(0, 1 - DIVIDE([Students with Missing Data], [Total Students] * 3))

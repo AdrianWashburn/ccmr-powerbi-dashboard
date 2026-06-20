@@ -1,0 +1,10 @@
+-- Configuration-driven examples. Replace FactCCMRStatus with calculated status table if materialized.
+Missing LocalStudentID Count = /* Missing LocalStudentID Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Duplicate Student Count = /* Duplicate Student Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Assessment Records Without Student Match = /* Assessment Records Without Student Match: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Transcript Records Without Student Match = /* Transcript Records Without Student Match: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CTE Records Without Student Match = /* CTE Records Without Student Match: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Notes Without Student Match = /* Notes Without Student Match: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Missing Counselor Count = /* Missing Counselor Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Missing Cohort Count = /* Missing Cohort Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Missing Demographic Data Count = /* Missing Demographic Data Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])

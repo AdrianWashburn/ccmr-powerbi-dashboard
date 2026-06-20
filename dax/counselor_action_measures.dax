@@ -1,0 +1,9 @@
+-- Configuration-driven examples. Replace FactCCMRStatus with calculated status table if materialized.
+Notes Count = /* Notes Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Students with Notes Count = /* Students with Notes Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Students without Notes Count = /* Students without Notes Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Open Actions Count = /* Open Actions Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Completed Actions Count = /* Completed Actions Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Overdue Actions Count = /* Overdue Actions Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Students Needing Conference Count = /* Students Needing Conference Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Follow-Up Due This Week Count = /* Follow-Up Due This Week Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
