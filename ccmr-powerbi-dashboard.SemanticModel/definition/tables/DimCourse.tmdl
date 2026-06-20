@@ -1,0 +1,13 @@
+table DimCourse
+
+	column CourseCode
+		dataType: string
+		sourceColumn: CourseCode
+
+	column CourseName
+		dataType: string
+		sourceColumn: CourseName
+
+	column SubjectArea
+		dataType: string
+		sourceColumn: SubjectArea

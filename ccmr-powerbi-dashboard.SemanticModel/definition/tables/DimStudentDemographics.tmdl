@@ -1,0 +1,65 @@
+table DimStudentDemographics
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column RaceEthnicity
+		dataType: string
+		sourceColumn: RaceEthnicity
+
+	column Gender
+		dataType: string
+		sourceColumn: Gender
+
+	column EconomicallyDisadvantaged
+		dataType: boolean
+		sourceColumn: EconomicallyDisadvantaged
+
+	column EmergentBilingual
+		dataType: boolean
+		sourceColumn: EmergentBilingual
+
+	column Section504
+		dataType: boolean
+		sourceColumn: Section504
+
+	column SpecialEdCurrent
+		dataType: boolean
+		sourceColumn: SpecialEdCurrent
+
+	column SpecialEdFormer
+		dataType: boolean
+		sourceColumn: SpecialEdFormer
+
+	column HighFocus
+		dataType: boolean
+		sourceColumn: HighFocus
+
+	column HighlyMobile
+		dataType: boolean
+		sourceColumn: HighlyMobile
+
+	column FosterCare
+		dataType: boolean
+		sourceColumn: FosterCare
+
+	column Homeless
+		dataType: boolean
+		sourceColumn: Homeless
+
+	column Migratory
+		dataType: boolean
+		sourceColumn: Migratory
+
+	column ContinuouslyEnrolled
+		dataType: boolean
+		sourceColumn: ContinuouslyEnrolled
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

@@ -1,0 +1,33 @@
+table Security
+
+	column UserEmail
+		dataType: string
+		sourceColumn: UserEmail
+
+	column Role
+		dataType: string
+		sourceColumn: Role
+
+	column CampusID
+		dataType: string
+		sourceColumn: CampusID
+
+	column CounselorName
+		dataType: string
+		sourceColumn: CounselorName
+
+	column TeacherID
+		dataType: string
+		sourceColumn: TeacherID
+
+	column ProgramAccess
+		dataType: string
+		sourceColumn: ProgramAccess
+
+	column CanViewNotes
+		dataType: boolean
+		sourceColumn: CanViewNotes
+
+	column CanViewSensitiveFlags
+		dataType: boolean
+		sourceColumn: CanViewSensitiveFlags

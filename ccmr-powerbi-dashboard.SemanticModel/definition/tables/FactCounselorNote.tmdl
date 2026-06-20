@@ -1,0 +1,73 @@
+table FactCounselorNote
+
+	column NoteID
+		dataType: string
+		sourceColumn: NoteID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column StudentName
+		dataType: string
+		sourceColumn: StudentName
+
+	column CreatedBy
+		dataType: string
+		sourceColumn: CreatedBy
+
+	column CreatedDate
+		dataType: dateTime
+		sourceColumn: CreatedDate
+
+	column NoteType
+		dataType: string
+		sourceColumn: NoteType
+
+	column NoteText
+		dataType: string
+		sourceColumn: NoteText
+
+	column PrimaryPathway
+		dataType: string
+		sourceColumn: PrimaryPathway
+
+	column BackupPathway
+		dataType: string
+		sourceColumn: BackupPathway
+
+	column RecommendedCourse
+		dataType: string
+		sourceColumn: RecommendedCourse
+
+	column RecommendedAssessment
+		dataType: string
+		sourceColumn: RecommendedAssessment
+
+	column Barrier
+		dataType: string
+		sourceColumn: Barrier
+
+	column FollowUpDate
+		dataType: dateTime
+		sourceColumn: FollowUpDate
+
+	column ActionStatus
+		dataType: string
+		sourceColumn: ActionStatus
+
+	column ActionOwner
+		dataType: string
+		sourceColumn: ActionOwner
+
+	column ConfidentialFlag
+		dataType: string
+		sourceColumn: ConfidentialFlag
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

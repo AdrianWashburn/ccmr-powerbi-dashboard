@@ -1,0 +1,67 @@
+table _Measures
+	isHidden
+
+	column MeasureTable
+		dataType: string
+		isHidden
+		sourceColumn: MeasureTable
+
+	measure 'Total Students' = DISTINCTCOUNT ( DimStudent[LocalStudentID] )
+		formatString: #,0
+
+	measure 'Active Students' = CALCULATE ( [Total Students], DimStudent[EnrollmentStatus] = "Active" )
+		formatString: #,0
+
+	measure Seniors = CALCULATE ( [Total Students], DimStudent[GradeLevel] = 12 )
+		formatString: #,0
+
+	measure Juniors = CALCULATE ( [Total Students], DimStudent[GradeLevel] = 11 )
+		formatString: #,0
+
+	measure Sophomores = CALCULATE ( [Total Students], DimStudent[GradeLevel] = 10 )
+		formatString: #,0
+
+	measure Freshmen = CALCULATE ( [Total Students], DimStudent[GradeLevel] = 9 )
+		formatString: #,0
+
+	measure 'CCMR Met Count' = DISTINCTCOUNT ( FactCCMRStatus[LocalStudentID] )
+		formatString: #,0
+
+	measure 'CCMR Not Met Count' = [Total Students] - [CCMR Met Count]
+		formatString: #,0
+
+	measure 'CCMR Met %' = DIVIDE ( [CCMR Met Count], [Total Students] )
+		formatString: 0.00%;-0.00%;0.00%
+
+	measure 'Notes Count' = COUNTROWS ( FactCounselorNote )
+		formatString: #,0
+
+	measure 'Open Actions Count' = CALCULATE ( COUNTROWS ( FactCounselorNote ), FactCounselorNote[ActionStatus] = "Open" )
+		formatString: #,0
+
+	measure 'Overdue Actions Count' = CALCULATE ( COUNTROWS ( FactCounselorNote ), FactCounselorNote[ActionStatus] = "Open", FactCounselorNote[FollowUpDate] < TODAY() )
+		formatString: #,0
+
+	measure 'Students Assigned Intervention' = DISTINCTCOUNT ( FactInterventionAssignment[LocalStudentID] )
+		formatString: #,0
+
+	measure 'Retest Ready Count' = CALCULATE ( DISTINCTCOUNT ( FactInterventionAssignment[LocalStudentID] ), FactInterventionAssignment[RetestRecommended] = TRUE() )
+		formatString: #,0
+
+	measure 'CTE Students Count' = DISTINCTCOUNT ( FactCTEProgress[LocalStudentID] )
+		formatString: #,0
+
+	measure 'Completer Count' = CALCULATE ( DISTINCTCOUNT ( FactCTEProgress[LocalStudentID] ), FactCTEProgress[Completer] = TRUE() )
+		formatString: #,0
+
+	measure 'IBC Passed Count' = CALCULATE ( DISTINCTCOUNT ( FactIBC[LocalStudentID] ), FactIBC[Passed] = TRUE() )
+		formatString: #,0
+
+	measure 'IBC Verified Count' = CALCULATE ( DISTINCTCOUNT ( FactIBC[LocalStudentID] ), FactIBC[Verified] = TRUE() )
+		formatString: #,0
+
+	measure 'Data Quality Score' = 1 - DIVIDE ( [Missing LocalStudentID Count], [Total Students] )
+		formatString: 0.00%;-0.00%;0.00%
+
+	measure 'Missing LocalStudentID Count' = COUNTROWS ( FILTER ( DimStudent, ISBLANK ( DimStudent[LocalStudentID] ) ) )
+		formatString: #,0

@@ -1,0 +1,45 @@
+table DimIntervention
+
+	column InterventionKey
+		dataType: string
+		sourceColumn: InterventionKey
+
+	column ContentArea
+		dataType: string
+		sourceColumn: ContentArea
+
+	column SkillName
+		dataType: string
+		sourceColumn: SkillName
+
+	column EvidenceSource
+		dataType: string
+		sourceColumn: EvidenceSource
+
+	column RecommendedIntervention
+		dataType: string
+		sourceColumn: RecommendedIntervention
+
+	column ProgressMonitor
+		dataType: string
+		sourceColumn: ProgressMonitor
+
+	column ExitCriterion
+		dataType: string
+		sourceColumn: ExitCriterion
+
+	column RetestRecommendation
+		dataType: string
+		sourceColumn: RetestRecommendation
+
+	column SuggestedInterventionGroup
+		dataType: string
+		sourceColumn: SuggestedInterventionGroup
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

@@ -1,0 +1,36 @@
+culture: en-US
+discourageImplicitMeasures
+
+ref table DimStudent
+ref table DimStudentDemographics
+ref table FactAssessmentAttempt
+ref table FactSkillPerformance
+ref table FactTranscriptCourse
+ref table FactCurrentSchedule
+ref table FactCourseRequest
+ref table DimProgramOfStudy
+ref table FactCTEProgress
+ref table FactIBC
+ref table FactDualCreditOnRamps
+ref table FactCounselorNote
+ref table FactInterventionAssignment
+ref table DimCCMRRule
+ref table DimIntervention
+ref table FactAttendance
+ref table FactDiscipline
+ref table DimDate
+ref table DimAssessment
+ref table DimCourse
+ref table DimCampus
+ref table DimCounselor
+ref table DimPathway
+ref table FactCCMRStatus
+ref table _Measures
+ref table Security
+
+ref role 'District Leaders'
+ref role 'Campus Principal'
+ref role 'Counselor'
+
+annotation TabularEditor_SerializeOptions = {"IgnoreInferredObjects":true,"IgnoreInferredProperties":true,"IgnoreTimestamps":true,"SplitMultilineStrings":true,"PrefixFilenames":false,"LocalTranslations":true,"LocalPerspectives":true,"LocalRelationships":true,"Levels":["Tables","Tables/Columns","Tables/Measures","Relationships","Roles"]}
+annotation PBI_QueryOrder = []

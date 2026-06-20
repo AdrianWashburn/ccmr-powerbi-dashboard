@@ -1,0 +1,41 @@
+table FactSkillPerformance
+
+	column SkillRecordID
+		dataType: string
+		sourceColumn: SkillRecordID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column ContentArea
+		dataType: string
+		sourceColumn: ContentArea
+
+	column SkillName
+		dataType: string
+		sourceColumn: SkillName
+
+	column EvidenceSource
+		dataType: string
+		sourceColumn: EvidenceSource
+
+	column PercentMastery
+		dataType: int64
+		sourceColumn: PercentMastery
+
+	column SkillStatus
+		dataType: string
+		sourceColumn: SkillStatus
+
+	column RecommendedGroup
+		dataType: string
+		sourceColumn: RecommendedGroup
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

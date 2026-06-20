@@ -1,0 +1,9 @@
+table DimPathway
+
+	column Pathway
+		dataType: string
+		sourceColumn: Pathway
+
+	column PathwayCategory
+		dataType: string
+		sourceColumn: PathwayCategory

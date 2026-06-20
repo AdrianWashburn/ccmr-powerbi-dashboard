@@ -1,0 +1,12 @@
+role 'District Leaders'
+	modelPermission: read
+
+role 'Campus Principal'
+	modelPermission: read
+	tablePermission DimStudent
+		filterExpression: DimStudent[CampusID] IN VALUES ( Security[CampusID] )
+
+role 'Counselor'
+	modelPermission: read
+	tablePermission DimStudent
+		filterExpression: DimStudent[CounselorName] IN VALUES ( Security[CounselorName] )

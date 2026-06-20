@@ -1,0 +1,33 @@
+table FactDiscipline
+
+	column DisciplineID
+		dataType: string
+		sourceColumn: DisciplineID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column IncidentDate
+		dataType: dateTime
+		sourceColumn: IncidentDate
+
+	column IncidentType
+		dataType: string
+		sourceColumn: IncidentType
+
+	column Severity
+		dataType: string
+		sourceColumn: Severity
+
+	column DaysRemoved
+		dataType: int64
+		sourceColumn: DaysRemoved
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp
