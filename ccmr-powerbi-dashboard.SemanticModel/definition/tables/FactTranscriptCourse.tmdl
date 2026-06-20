@@ -1,0 +1,49 @@
+table FactTranscriptCourse
+
+	column TranscriptID
+		dataType: string
+		sourceColumn: TranscriptID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column SchoolYear
+		dataType: int64
+		sourceColumn: SchoolYear
+
+	column Term
+		dataType: string
+		sourceColumn: Term
+
+	column CourseCode
+		dataType: string
+		sourceColumn: CourseCode
+
+	column CourseName
+		dataType: string
+		sourceColumn: CourseName
+
+	column SubjectArea
+		dataType: string
+		sourceColumn: SubjectArea
+
+	column CreditEarned
+		dataType: double
+		sourceColumn: CreditEarned
+
+	column FinalGrade
+		dataType: string
+		sourceColumn: FinalGrade
+
+	column GraduationRequirementArea
+		dataType: string
+		sourceColumn: GraduationRequirementArea
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

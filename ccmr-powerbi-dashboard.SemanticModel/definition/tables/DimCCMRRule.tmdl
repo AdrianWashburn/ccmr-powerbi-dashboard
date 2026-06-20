@@ -1,0 +1,53 @@
+table DimCCMRRule
+
+	column RuleID
+		dataType: string
+		sourceColumn: RuleID
+
+	column AssessmentType
+		dataType: string
+		sourceColumn: AssessmentType
+
+	column Subject
+		dataType: string
+		sourceColumn: Subject
+
+	column Metric
+		dataType: string
+		sourceColumn: Metric
+
+	column CutScore
+		dataType: int64
+		sourceColumn: CutScore
+
+	column SecondaryCriterion
+		dataType: string
+		sourceColumn: SecondaryCriterion
+
+	column PathwayCategory
+		dataType: string
+		sourceColumn: PathwayCategory
+
+	column RuleWeight
+		dataType: string
+		sourceColumn: RuleWeight
+
+	column ActiveStartYear
+		dataType: int64
+		sourceColumn: ActiveStartYear
+
+	column ActiveEndYear
+		dataType: int64
+		sourceColumn: ActiveEndYear
+
+	column RuleStatus
+		dataType: string
+		sourceColumn: RuleStatus
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

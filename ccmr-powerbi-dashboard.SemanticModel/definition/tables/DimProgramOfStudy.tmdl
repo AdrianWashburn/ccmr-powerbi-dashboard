@@ -1,0 +1,25 @@
+table DimProgramOfStudy
+
+	column ProgramOfStudyID
+		dataType: string
+		sourceColumn: ProgramOfStudyID
+
+	column ProgramName
+		dataType: string
+		sourceColumn: ProgramName
+
+	column CareerCluster
+		dataType: string
+		sourceColumn: CareerCluster
+
+	column ProgramPathway
+		dataType: string
+		sourceColumn: ProgramPathway
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

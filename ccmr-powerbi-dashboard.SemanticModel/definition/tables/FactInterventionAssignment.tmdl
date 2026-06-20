@@ -1,0 +1,53 @@
+table FactInterventionAssignment
+
+	column InterventionID
+		dataType: string
+		sourceColumn: InterventionID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column ContentArea
+		dataType: string
+		sourceColumn: ContentArea
+
+	column SkillName
+		dataType: string
+		sourceColumn: SkillName
+
+	column RecommendedIntervention
+		dataType: string
+		sourceColumn: RecommendedIntervention
+
+	column ProgressMonitor
+		dataType: string
+		sourceColumn: ProgressMonitor
+
+	column ExitCriterion
+		dataType: string
+		sourceColumn: ExitCriterion
+
+	column RetestRecommended
+		dataType: boolean
+		sourceColumn: RetestRecommended
+
+	column AssignedDate
+		dataType: dateTime
+		sourceColumn: AssignedDate
+
+	column NextProgressMonitorDate
+		dataType: dateTime
+		sourceColumn: NextProgressMonitorDate
+
+	column InterventionStatus
+		dataType: string
+		sourceColumn: InterventionStatus
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

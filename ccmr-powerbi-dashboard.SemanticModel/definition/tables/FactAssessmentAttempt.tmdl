@@ -1,0 +1,45 @@
+table FactAssessmentAttempt
+
+	column AssessmentAttemptID
+		dataType: string
+		sourceColumn: AssessmentAttemptID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column AssessmentType
+		dataType: string
+		sourceColumn: AssessmentType
+
+	column Subject
+		dataType: string
+		sourceColumn: Subject
+
+	column AssessmentDate
+		dataType: dateTime
+		sourceColumn: AssessmentDate
+
+	column ScaleScore
+		dataType: int64
+		sourceColumn: ScaleScore
+
+	column MetCriterion
+		dataType: boolean
+		sourceColumn: MetCriterion
+
+	column AccommodationUsed
+		dataType: boolean
+		sourceColumn: AccommodationUsed
+
+	column Administration
+		dataType: string
+		sourceColumn: Administration
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

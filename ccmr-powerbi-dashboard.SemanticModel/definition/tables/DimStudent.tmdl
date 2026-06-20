@@ -1,0 +1,57 @@
+table DimStudent
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column TXUniqueStudentID
+		dataType: string
+		sourceColumn: TXUniqueStudentID
+
+	column FirstName
+		dataType: string
+		sourceColumn: FirstName
+
+	column LastName
+		dataType: string
+		sourceColumn: LastName
+
+	column CampusName
+		dataType: string
+		sourceColumn: CampusName
+
+	column CampusID
+		dataType: string
+		sourceColumn: CampusID
+
+	column GradeLevel
+		dataType: int64
+		sourceColumn: GradeLevel
+
+	column CohortYear
+		dataType: int64
+		sourceColumn: CohortYear
+
+	column DateOfBirth
+		dataType: dateTime
+		sourceColumn: DateOfBirth
+
+	column CounselorName
+		dataType: string
+		sourceColumn: CounselorName
+
+	column EnrollmentStatus
+		dataType: string
+		sourceColumn: EnrollmentStatus
+
+	column TeacherID
+		dataType: string
+		sourceColumn: TeacherID
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

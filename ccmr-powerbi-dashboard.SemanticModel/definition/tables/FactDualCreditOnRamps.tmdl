@@ -1,0 +1,37 @@
+table FactDualCreditOnRamps
+
+	column DualOnRampsID
+		dataType: string
+		sourceColumn: DualOnRampsID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column ProgramType
+		dataType: string
+		sourceColumn: ProgramType
+
+	column CourseCode
+		dataType: string
+		sourceColumn: CourseCode
+
+	column Completed
+		dataType: boolean
+		sourceColumn: Completed
+
+	column CollegeCredits
+		dataType: int64
+		sourceColumn: CollegeCredits
+
+	column CompletionDate
+		dataType: dateTime
+		sourceColumn: CompletionDate
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

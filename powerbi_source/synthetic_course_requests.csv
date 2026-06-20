@@ -1,0 +1,101 @@
+RequestID,LocalStudentID,CourseCode,CourseName,SubjectArea,RequestedYear,RequestStatus
+RQ000,S10000,GEOM,Geometry,Math,2026-2027,Recommended
+RQ001,S10001,BIO,Biology,Science,2026-2027,Requested
+RQ002,S10002,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ003,S10003,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ004,S10004,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ005,S10005,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ006,S10006,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ007,S10007,ENG1,English I,ELA,2026-2027,Requested
+RQ008,S10008,ENG2,English II,ELA,2026-2027,Recommended
+RQ009,S10009,ALG1,Algebra I,Math,2026-2027,Requested
+RQ010,S10010,GEOM,Geometry,Math,2026-2027,Recommended
+RQ011,S10011,BIO,Biology,Science,2026-2027,Requested
+RQ012,S10012,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ013,S10013,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ014,S10014,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ015,S10015,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ016,S10016,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ017,S10017,ENG1,English I,ELA,2026-2027,Requested
+RQ018,S10018,ENG2,English II,ELA,2026-2027,Recommended
+RQ019,S10019,ALG1,Algebra I,Math,2026-2027,Requested
+RQ020,S10020,GEOM,Geometry,Math,2026-2027,Recommended
+RQ021,S10021,BIO,Biology,Science,2026-2027,Requested
+RQ022,S10022,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ023,S10023,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ024,S10024,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ025,S10025,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ026,S10026,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ027,S10027,ENG1,English I,ELA,2026-2027,Requested
+RQ028,S10028,ENG2,English II,ELA,2026-2027,Recommended
+RQ029,S10029,ALG1,Algebra I,Math,2026-2027,Requested
+RQ030,S10030,GEOM,Geometry,Math,2026-2027,Recommended
+RQ031,S10031,BIO,Biology,Science,2026-2027,Requested
+RQ032,S10032,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ033,S10033,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ034,S10034,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ035,S10035,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ036,S10036,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ037,S10037,ENG1,English I,ELA,2026-2027,Requested
+RQ038,S10038,ENG2,English II,ELA,2026-2027,Recommended
+RQ039,S10039,ALG1,Algebra I,Math,2026-2027,Requested
+RQ040,S10040,GEOM,Geometry,Math,2026-2027,Recommended
+RQ041,S10041,BIO,Biology,Science,2026-2027,Requested
+RQ042,S10042,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ043,S10043,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ044,S10044,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ045,S10045,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ046,S10046,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ047,S10047,ENG1,English I,ELA,2026-2027,Requested
+RQ048,S10048,ENG2,English II,ELA,2026-2027,Recommended
+RQ049,S10049,ALG1,Algebra I,Math,2026-2027,Requested
+RQ050,S10050,GEOM,Geometry,Math,2026-2027,Recommended
+RQ051,S10051,BIO,Biology,Science,2026-2027,Requested
+RQ052,S10052,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ053,S10053,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ054,S10054,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ055,S10055,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ056,S10056,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ057,S10057,ENG1,English I,ELA,2026-2027,Requested
+RQ058,S10058,ENG2,English II,ELA,2026-2027,Recommended
+RQ059,S10059,ALG1,Algebra I,Math,2026-2027,Requested
+RQ060,S10060,GEOM,Geometry,Math,2026-2027,Recommended
+RQ061,S10061,BIO,Biology,Science,2026-2027,Requested
+RQ062,S10062,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ063,S10063,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ064,S10064,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ065,S10065,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ066,S10066,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ067,S10067,ENG1,English I,ELA,2026-2027,Requested
+RQ068,S10068,ENG2,English II,ELA,2026-2027,Recommended
+RQ069,S10069,ALG1,Algebra I,Math,2026-2027,Requested
+RQ070,S10070,GEOM,Geometry,Math,2026-2027,Recommended
+RQ071,S10071,BIO,Biology,Science,2026-2027,Requested
+RQ072,S10072,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ073,S10073,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ074,S10074,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ075,S10075,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ076,S10076,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ077,S10077,ENG1,English I,ELA,2026-2027,Requested
+RQ078,S10078,ENG2,English II,ELA,2026-2027,Recommended
+RQ079,S10079,ALG1,Algebra I,Math,2026-2027,Requested
+RQ080,S10080,GEOM,Geometry,Math,2026-2027,Recommended
+RQ081,S10081,BIO,Biology,Science,2026-2027,Requested
+RQ082,S10082,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ083,S10083,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ084,S10084,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ085,S10085,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ086,S10086,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ087,S10087,ENG1,English I,ELA,2026-2027,Requested
+RQ088,S10088,ENG2,English II,ELA,2026-2027,Recommended
+RQ089,S10089,ALG1,Algebra I,Math,2026-2027,Requested
+RQ090,S10090,GEOM,Geometry,Math,2026-2027,Recommended
+RQ091,S10091,BIO,Biology,Science,2026-2027,Requested
+RQ092,S10092,BUS1,Principles of Business,CTE,2026-2027,Recommended
+RQ093,S10093,HLTH1,Principles of Health Science,CTE,2026-2027,Requested
+RQ094,S10094,IT1,Principles of IT,CTE,2026-2027,Recommended
+RQ095,S10095,EDU1,Principles of Education,CTE,2026-2027,Requested
+RQ096,S10096,MFG1,Principles of Manufacturing,CTE,2026-2027,Recommended
+RQ097,S10097,ENG1,English I,ELA,2026-2027,Requested
+RQ098,S10098,ENG2,English II,ELA,2026-2027,Recommended
+RQ099,S10099,ALG1,Algebra I,Math,2026-2027,Requested

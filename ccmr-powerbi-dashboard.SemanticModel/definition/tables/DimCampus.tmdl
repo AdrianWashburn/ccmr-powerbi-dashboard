@@ -1,0 +1,9 @@
+table DimCampus
+
+	column CampusID
+		dataType: string
+		sourceColumn: CampusID
+
+	column CampusName
+		dataType: string
+		sourceColumn: CampusName

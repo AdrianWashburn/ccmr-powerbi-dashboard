@@ -1,0 +1,41 @@
+table FactCourseRequest
+
+	column RequestID
+		dataType: string
+		sourceColumn: RequestID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column SchoolYear
+		dataType: int64
+		sourceColumn: SchoolYear
+
+	column CourseCode
+		dataType: string
+		sourceColumn: CourseCode
+
+	column CourseName
+		dataType: string
+		sourceColumn: CourseName
+
+	column SubjectArea
+		dataType: string
+		sourceColumn: SubjectArea
+
+	column RequestedForSemester
+		dataType: string
+		sourceColumn: RequestedForSemester
+
+	column Priority
+		dataType: string
+		sourceColumn: Priority
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

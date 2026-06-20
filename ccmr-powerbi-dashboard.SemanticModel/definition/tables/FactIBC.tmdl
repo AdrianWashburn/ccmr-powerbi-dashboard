@@ -1,0 +1,45 @@
+table FactIBC
+
+	column IBCAttemptID
+		dataType: string
+		sourceColumn: IBCAttemptID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column IBCCode
+		dataType: string
+		sourceColumn: IBCCode
+
+	column IBCName
+		dataType: string
+		sourceColumn: IBCName
+
+	column ProgramOfStudyID
+		dataType: string
+		sourceColumn: ProgramOfStudyID
+
+	column Attempted
+		dataType: boolean
+		sourceColumn: Attempted
+
+	column Passed
+		dataType: boolean
+		sourceColumn: Passed
+
+	column Verified
+		dataType: boolean
+		sourceColumn: Verified
+
+	column AttemptDate
+		dataType: dateTime
+		sourceColumn: AttemptDate
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

@@ -1,0 +1,5 @@
+table DimCounselor
+
+	column CounselorName
+		dataType: string
+		sourceColumn: CounselorName

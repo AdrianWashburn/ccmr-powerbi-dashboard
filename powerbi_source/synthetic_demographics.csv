@@ -1,0 +1,101 @@
+LocalStudentID,RaceEthnicity,Gender,EconomicallyDisadvantaged,EmergentBilingual,Section504,SpecialEdCurrent,SpecialEdFormer,HighFocus,HighlyMobile,FosterCare,Homeless,Migratory,ContinuouslyEnrolled
+S10000,Hispanic/Latino,F,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+S10001,White,M,No,No,No,No,No,No,No,No,No,No,No
+S10002,Black/African American,F,No,No,No,No,No,No,No,No,No,No,No
+S10003,Asian,M,Yes,No,No,No,No,No,No,No,No,No,No
+S10004,Two or More,F,No,No,No,No,No,No,No,No,No,No,No
+S10005,Hispanic/Latino,M,No,No,No,No,No,Yes,No,No,No,No,No
+S10006,White,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10007,Black/African American,M,No,Yes,No,No,No,No,No,No,No,No,No
+S10008,Asian,F,No,No,No,No,No,No,No,No,No,No,No
+S10009,Two or More,M,Yes,No,No,No,No,No,No,No,No,No,No
+S10010,Hispanic/Latino,F,No,No,No,No,No,Yes,No,No,No,No,No
+S10011,White,M,No,No,Yes,No,No,No,No,No,No,No,No
+S10012,Black/African American,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10013,Asian,M,No,No,No,Yes,No,No,No,No,No,No,No
+S10014,Two or More,F,No,Yes,No,No,No,No,No,No,No,No,No
+S10015,Hispanic/Latino,M,Yes,No,No,No,No,Yes,No,No,No,No,No
+S10016,White,F,No,No,No,No,No,No,No,No,No,No,No
+S10017,Black/African American,M,No,No,No,No,Yes,No,No,No,No,No,No
+S10018,Asian,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10019,Two or More,M,No,No,No,No,No,No,Yes,No,No,No,No
+S10020,Hispanic/Latino,F,No,No,No,No,No,Yes,No,No,No,No,No
+S10021,White,M,Yes,Yes,No,No,No,No,No,No,No,No,No
+S10022,Black/African American,F,No,No,Yes,No,No,No,No,No,No,No,No
+S10023,Asian,M,No,No,No,No,No,No,No,Yes,No,No,No
+S10024,Two or More,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10025,Hispanic/Latino,M,No,No,No,No,No,Yes,No,No,No,No,No
+S10026,White,F,No,No,No,Yes,No,No,No,No,No,No,No
+S10027,Black/African American,M,Yes,No,No,No,No,No,No,No,No,No,No
+S10028,Asian,F,No,Yes,No,No,No,No,No,No,No,No,No
+S10029,Two or More,M,No,No,No,No,No,No,No,No,Yes,No,No
+S10030,Hispanic/Latino,F,Yes,No,No,No,No,Yes,No,No,No,No,No
+S10031,White,M,No,No,No,No,No,No,No,No,No,Yes,No
+S10032,Black/African American,F,No,No,No,No,No,No,No,No,No,No,No
+S10033,Asian,M,Yes,No,Yes,No,No,No,No,No,No,No,No
+S10034,Two or More,F,No,No,No,No,Yes,No,No,No,No,No,No
+S10035,Hispanic/Latino,M,No,Yes,No,No,No,Yes,No,No,No,No,No
+S10036,White,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10037,Black/African American,M,No,No,No,No,No,No,No,No,No,No,Yes
+S10038,Asian,F,No,No,No,No,No,No,Yes,No,No,No,No
+S10039,Two or More,M,Yes,No,No,Yes,No,No,No,No,No,No,No
+S10040,Hispanic/Latino,F,No,No,No,No,No,Yes,No,No,No,No,No
+S10041,White,M,No,No,No,No,No,No,No,No,No,No,No
+S10042,Black/African American,F,Yes,Yes,No,No,No,No,No,No,No,No,No
+S10043,Asian,M,No,No,No,No,No,No,No,No,No,No,No
+S10044,Two or More,F,No,No,Yes,No,No,No,No,No,No,No,No
+S10045,Hispanic/Latino,M,Yes,No,No,No,No,Yes,No,No,No,No,No
+S10046,White,F,No,No,No,No,No,No,No,Yes,No,No,No
+S10047,Black/African American,M,No,No,No,No,No,No,No,No,No,No,No
+S10048,Asian,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10049,Two or More,M,No,Yes,No,No,No,No,No,No,No,No,No
+S10050,Hispanic/Latino,F,No,No,No,No,No,Yes,No,No,No,No,No
+S10051,White,M,Yes,No,No,No,Yes,No,No,No,No,No,No
+S10052,Black/African American,F,No,No,No,Yes,No,No,No,No,No,No,No
+S10053,Asian,M,No,No,No,No,No,No,No,No,No,No,No
+S10054,Two or More,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10055,Hispanic/Latino,M,No,No,Yes,No,No,Yes,No,No,No,No,No
+S10056,White,F,No,Yes,No,No,No,No,No,No,No,No,No
+S10057,Black/African American,M,Yes,No,No,No,No,No,Yes,No,No,No,No
+S10058,Asian,F,No,No,No,No,No,No,No,No,Yes,No,No
+S10059,Two or More,M,No,No,No,No,No,No,No,No,No,No,No
+S10060,Hispanic/Latino,F,Yes,No,No,No,No,Yes,No,No,No,No,No
+S10061,White,M,No,No,No,No,No,No,No,No,No,No,No
+S10062,Black/African American,F,No,No,No,No,No,No,No,No,No,Yes,No
+S10063,Asian,M,Yes,Yes,No,No,No,No,No,No,No,No,No
+S10064,Two or More,F,No,No,No,No,No,No,No,No,No,No,No
+S10065,Hispanic/Latino,M,No,No,No,Yes,No,Yes,No,No,No,No,No
+S10066,White,F,Yes,No,Yes,No,No,No,No,No,No,No,No
+S10067,Black/African American,M,No,No,No,No,No,No,No,No,No,No,No
+S10068,Asian,F,No,No,No,No,Yes,No,No,No,No,No,No
+S10069,Two or More,M,Yes,No,No,No,No,No,No,Yes,No,No,No
+S10070,Hispanic/Latino,F,No,Yes,No,No,No,Yes,No,No,No,No,No
+S10071,White,M,No,No,No,No,No,No,No,No,No,No,No
+S10072,Black/African American,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10073,Asian,M,No,No,No,No,No,No,No,No,No,No,No
+S10074,Two or More,F,No,No,No,No,No,No,No,No,No,No,Yes
+S10075,Hispanic/Latino,M,Yes,No,No,No,No,Yes,No,No,No,No,No
+S10076,White,F,No,No,No,No,No,No,Yes,No,No,No,No
+S10077,Black/African American,M,No,Yes,Yes,No,No,No,No,No,No,No,No
+S10078,Asian,F,Yes,No,No,Yes,No,No,No,No,No,No,No
+S10079,Two or More,M,No,No,No,No,No,No,No,No,No,No,No
+S10080,Hispanic/Latino,F,No,No,No,No,No,Yes,No,No,No,No,No
+S10081,White,M,Yes,No,No,No,No,No,No,No,No,No,No
+S10082,Black/African American,F,No,No,No,No,No,No,No,No,No,No,No
+S10083,Asian,M,No,No,No,No,No,No,No,No,No,No,No
+S10084,Two or More,F,Yes,Yes,No,No,No,No,No,No,No,No,No
+S10085,Hispanic/Latino,M,No,No,No,No,Yes,Yes,No,No,No,No,No
+S10086,White,F,No,No,No,No,No,No,No,No,No,No,No
+S10087,Black/African American,M,Yes,No,No,No,No,No,No,No,Yes,No,No
+S10088,Asian,F,No,No,Yes,No,No,No,No,No,No,No,No
+S10089,Two or More,M,No,No,No,No,No,No,No,No,No,No,No
+S10090,Hispanic/Latino,F,Yes,No,No,No,No,Yes,No,No,No,No,No
+S10091,White,M,No,Yes,No,Yes,No,No,No,No,No,No,No
+S10092,Black/African American,F,No,No,No,No,No,No,No,Yes,No,No,No
+S10093,Asian,M,Yes,No,No,No,No,No,No,No,No,Yes,No
+S10094,Two or More,F,No,No,No,No,No,No,No,No,No,No,No
+S10095,Hispanic/Latino,M,No,No,No,No,No,Yes,Yes,No,No,No,No
+S10096,White,F,Yes,No,No,No,No,No,No,No,No,No,No
+S10097,Black/African American,M,No,No,No,No,No,No,No,No,No,No,No
+S10098,Asian,F,No,Yes,No,No,No,No,No,No,No,No,No
+S10099,Two or More,M,Yes,No,Yes,No,No,No,No,No,No,No,No

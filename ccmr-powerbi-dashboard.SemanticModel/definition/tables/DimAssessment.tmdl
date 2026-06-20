@@ -1,0 +1,9 @@
+table DimAssessment
+
+	column AssessmentType
+		dataType: string
+		sourceColumn: AssessmentType
+
+	column Subject
+		dataType: string
+		sourceColumn: Subject

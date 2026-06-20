@@ -1,0 +1,45 @@
+table FactCurrentSchedule
+
+	column ScheduleID
+		dataType: string
+		sourceColumn: ScheduleID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column SchoolYear
+		dataType: int64
+		sourceColumn: SchoolYear
+
+	column Semester
+		dataType: string
+		sourceColumn: Semester
+
+	column CourseCode
+		dataType: string
+		sourceColumn: CourseCode
+
+	column CourseName
+		dataType: string
+		sourceColumn: CourseName
+
+	column SubjectArea
+		dataType: string
+		sourceColumn: SubjectArea
+
+	column TeacherName
+		dataType: string
+		sourceColumn: TeacherName
+
+	column Period
+		dataType: string
+		sourceColumn: Period
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

@@ -1,0 +1,201 @@
+SkillRecordID,LocalStudentID,ContentArea,SkillName,EvidenceSource,PercentMastery,SkillStatus,RecommendedGroup
+SK0000,S10000,ELA,Main idea and author purpose,SAT/TSIA/STAAR,45,Gap,Small group
+SK0001,S10000,Math,Linear equations,SAT/TSIA/STAAR,58,Gap,Small group
+SK0010,S10001,ELA,Inference and evidence,SAT/TSIA/STAAR,52,Gap,Small group
+SK0011,S10001,Math,Systems of equations,SAT/TSIA/STAAR,65,Gap,Small group
+SK0020,S10002,ELA,Vocabulary in context,SAT/TSIA/STAAR,59,Gap,Small group
+SK0021,S10002,Math,Functions,SAT/TSIA/STAAR,72,Gap,Extension
+SK0030,S10003,ELA,Paired passage analysis,SAT/TSIA/STAAR,66,Gap,Small group
+SK0031,S10003,Math,Geometry and measurement,SAT/TSIA/STAAR,79,Strength,Extension
+SK0040,S10004,ELA,Revision and organization,SAT/TSIA/STAAR,73,Gap,Extension
+SK0041,S10004,Math,Data analysis,SAT/TSIA/STAAR,86,Strength,Extension
+SK0050,S10005,ELA,Editing and conventions,SAT/TSIA/STAAR,80,Strength,Extension
+SK0051,S10005,Math,Probability/statistics,SAT/TSIA/STAAR,93,Strength,Extension
+SK0060,S10006,ELA,Sentence structure,SAT/TSIA/STAAR,87,Strength,Extension
+SK0061,S10006,Math,Quadratics,SAT/TSIA/STAAR,45,Gap,Small group
+SK0070,S10007,ELA,Development of ideas,SAT/TSIA/STAAR,94,Strength,Extension
+SK0071,S10007,Math,Algebraic expressions,SAT/TSIA/STAAR,52,Gap,Small group
+SK0080,S10008,ELA,Written composition,SAT/TSIA/STAAR,46,Gap,Small group
+SK0081,S10008,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,59,Gap,Small group
+SK0090,S10009,ELA,Argument analysis,SAT/TSIA/STAAR,53,Gap,Small group
+SK0091,S10009,Math,Multi-step problem solving,SAT/TSIA/STAAR,66,Gap,Small group
+SK0100,S10010,ELA,Short constructed response,SAT/TSIA/STAAR,60,Gap,Small group
+SK0101,S10010,Math,TSIA quantitative reasoning,SAT/TSIA/STAAR,73,Gap,Extension
+SK0110,S10011,ELA,Main idea and author purpose,SAT/TSIA/STAAR,67,Gap,Small group
+SK0111,S10011,Math,SAT problem solving and data analysis,SAT/TSIA/STAAR,80,Strength,Extension
+SK0120,S10012,ELA,Inference and evidence,SAT/TSIA/STAAR,74,Gap,Extension
+SK0121,S10012,Math,Linear equations,SAT/TSIA/STAAR,87,Strength,Extension
+SK0130,S10013,ELA,Vocabulary in context,SAT/TSIA/STAAR,81,Strength,Extension
+SK0131,S10013,Math,Systems of equations,SAT/TSIA/STAAR,94,Strength,Extension
+SK0140,S10014,ELA,Paired passage analysis,SAT/TSIA/STAAR,88,Strength,Extension
+SK0141,S10014,Math,Functions,SAT/TSIA/STAAR,46,Gap,Small group
+SK0150,S10015,ELA,Revision and organization,SAT/TSIA/STAAR,95,Strength,Extension
+SK0151,S10015,Math,Geometry and measurement,SAT/TSIA/STAAR,53,Gap,Small group
+SK0160,S10016,ELA,Editing and conventions,SAT/TSIA/STAAR,47,Gap,Small group
+SK0161,S10016,Math,Data analysis,SAT/TSIA/STAAR,60,Gap,Small group
+SK0170,S10017,ELA,Sentence structure,SAT/TSIA/STAAR,54,Gap,Small group
+SK0171,S10017,Math,Probability/statistics,SAT/TSIA/STAAR,67,Gap,Small group
+SK0180,S10018,ELA,Development of ideas,SAT/TSIA/STAAR,61,Gap,Small group
+SK0181,S10018,Math,Quadratics,SAT/TSIA/STAAR,74,Gap,Extension
+SK0190,S10019,ELA,Written composition,SAT/TSIA/STAAR,68,Gap,Small group
+SK0191,S10019,Math,Algebraic expressions,SAT/TSIA/STAAR,81,Strength,Extension
+SK0200,S10020,ELA,Argument analysis,SAT/TSIA/STAAR,75,Strength,Extension
+SK0201,S10020,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,88,Strength,Extension
+SK0210,S10021,ELA,Short constructed response,SAT/TSIA/STAAR,82,Strength,Extension
+SK0211,S10021,Math,Multi-step problem solving,SAT/TSIA/STAAR,95,Strength,Extension
+SK0220,S10022,ELA,Main idea and author purpose,SAT/TSIA/STAAR,89,Strength,Extension
+SK0221,S10022,Math,TSIA quantitative reasoning,SAT/TSIA/STAAR,47,Gap,Small group
+SK0230,S10023,ELA,Inference and evidence,SAT/TSIA/STAAR,96,Strength,Extension
+SK0231,S10023,Math,SAT problem solving and data analysis,SAT/TSIA/STAAR,54,Gap,Small group
+SK0240,S10024,ELA,Vocabulary in context,SAT/TSIA/STAAR,48,Gap,Small group
+SK0241,S10024,Math,Linear equations,SAT/TSIA/STAAR,61,Gap,Small group
+SK0250,S10025,ELA,Paired passage analysis,SAT/TSIA/STAAR,55,Gap,Small group
+SK0251,S10025,Math,Systems of equations,SAT/TSIA/STAAR,68,Gap,Small group
+SK0260,S10026,ELA,Revision and organization,SAT/TSIA/STAAR,62,Gap,Small group
+SK0261,S10026,Math,Functions,SAT/TSIA/STAAR,75,Strength,Extension
+SK0270,S10027,ELA,Editing and conventions,SAT/TSIA/STAAR,69,Gap,Small group
+SK0271,S10027,Math,Geometry and measurement,SAT/TSIA/STAAR,82,Strength,Extension
+SK0280,S10028,ELA,Sentence structure,SAT/TSIA/STAAR,76,Strength,Extension
+SK0281,S10028,Math,Data analysis,SAT/TSIA/STAAR,89,Strength,Extension
+SK0290,S10029,ELA,Development of ideas,SAT/TSIA/STAAR,83,Strength,Extension
+SK0291,S10029,Math,Probability/statistics,SAT/TSIA/STAAR,96,Strength,Extension
+SK0300,S10030,ELA,Written composition,SAT/TSIA/STAAR,90,Strength,Extension
+SK0301,S10030,Math,Quadratics,SAT/TSIA/STAAR,48,Gap,Small group
+SK0310,S10031,ELA,Argument analysis,SAT/TSIA/STAAR,97,Strength,Extension
+SK0311,S10031,Math,Algebraic expressions,SAT/TSIA/STAAR,55,Gap,Small group
+SK0320,S10032,ELA,Short constructed response,SAT/TSIA/STAAR,49,Gap,Small group
+SK0321,S10032,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,62,Gap,Small group
+SK0330,S10033,ELA,Main idea and author purpose,SAT/TSIA/STAAR,56,Gap,Small group
+SK0331,S10033,Math,Multi-step problem solving,SAT/TSIA/STAAR,69,Gap,Small group
+SK0340,S10034,ELA,Inference and evidence,SAT/TSIA/STAAR,63,Gap,Small group
+SK0341,S10034,Math,TSIA quantitative reasoning,SAT/TSIA/STAAR,76,Strength,Extension
+SK0350,S10035,ELA,Vocabulary in context,SAT/TSIA/STAAR,70,Gap,Extension
+SK0351,S10035,Math,SAT problem solving and data analysis,SAT/TSIA/STAAR,83,Strength,Extension
+SK0360,S10036,ELA,Paired passage analysis,SAT/TSIA/STAAR,77,Strength,Extension
+SK0361,S10036,Math,Linear equations,SAT/TSIA/STAAR,90,Strength,Extension
+SK0370,S10037,ELA,Revision and organization,SAT/TSIA/STAAR,84,Strength,Extension
+SK0371,S10037,Math,Systems of equations,SAT/TSIA/STAAR,97,Strength,Extension
+SK0380,S10038,ELA,Editing and conventions,SAT/TSIA/STAAR,91,Strength,Extension
+SK0381,S10038,Math,Functions,SAT/TSIA/STAAR,49,Gap,Small group
+SK0390,S10039,ELA,Sentence structure,SAT/TSIA/STAAR,98,Strength,Extension
+SK0391,S10039,Math,Geometry and measurement,SAT/TSIA/STAAR,56,Gap,Small group
+SK0400,S10040,ELA,Development of ideas,SAT/TSIA/STAAR,50,Gap,Small group
+SK0401,S10040,Math,Data analysis,SAT/TSIA/STAAR,63,Gap,Small group
+SK0410,S10041,ELA,Written composition,SAT/TSIA/STAAR,57,Gap,Small group
+SK0411,S10041,Math,Probability/statistics,SAT/TSIA/STAAR,70,Gap,Extension
+SK0420,S10042,ELA,Argument analysis,SAT/TSIA/STAAR,64,Gap,Small group
+SK0421,S10042,Math,Quadratics,SAT/TSIA/STAAR,77,Strength,Extension
+SK0430,S10043,ELA,Short constructed response,SAT/TSIA/STAAR,71,Gap,Extension
+SK0431,S10043,Math,Algebraic expressions,SAT/TSIA/STAAR,84,Strength,Extension
+SK0440,S10044,ELA,Main idea and author purpose,SAT/TSIA/STAAR,78,Strength,Extension
+SK0441,S10044,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,91,Strength,Extension
+SK0450,S10045,ELA,Inference and evidence,SAT/TSIA/STAAR,85,Strength,Extension
+SK0451,S10045,Math,Multi-step problem solving,SAT/TSIA/STAAR,98,Strength,Extension
+SK0460,S10046,ELA,Vocabulary in context,SAT/TSIA/STAAR,92,Strength,Extension
+SK0461,S10046,Math,TSIA quantitative reasoning,SAT/TSIA/STAAR,50,Gap,Small group
+SK0470,S10047,ELA,Paired passage analysis,SAT/TSIA/STAAR,99,Strength,Extension
+SK0471,S10047,Math,SAT problem solving and data analysis,SAT/TSIA/STAAR,57,Gap,Small group
+SK0480,S10048,ELA,Revision and organization,SAT/TSIA/STAAR,51,Gap,Small group
+SK0481,S10048,Math,Linear equations,SAT/TSIA/STAAR,64,Gap,Small group
+SK0490,S10049,ELA,Editing and conventions,SAT/TSIA/STAAR,58,Gap,Small group
+SK0491,S10049,Math,Systems of equations,SAT/TSIA/STAAR,71,Gap,Extension
+SK0500,S10050,ELA,Sentence structure,SAT/TSIA/STAAR,65,Gap,Small group
+SK0501,S10050,Math,Functions,SAT/TSIA/STAAR,78,Strength,Extension
+SK0510,S10051,ELA,Development of ideas,SAT/TSIA/STAAR,72,Gap,Extension
+SK0511,S10051,Math,Geometry and measurement,SAT/TSIA/STAAR,85,Strength,Extension
+SK0520,S10052,ELA,Written composition,SAT/TSIA/STAAR,79,Strength,Extension
+SK0521,S10052,Math,Data analysis,SAT/TSIA/STAAR,92,Strength,Extension
+SK0530,S10053,ELA,Argument analysis,SAT/TSIA/STAAR,86,Strength,Extension
+SK0531,S10053,Math,Probability/statistics,SAT/TSIA/STAAR,99,Strength,Extension
+SK0540,S10054,ELA,Short constructed response,SAT/TSIA/STAAR,93,Strength,Extension
+SK0541,S10054,Math,Quadratics,SAT/TSIA/STAAR,51,Gap,Small group
+SK0550,S10055,ELA,Main idea and author purpose,SAT/TSIA/STAAR,45,Gap,Small group
+SK0551,S10055,Math,Algebraic expressions,SAT/TSIA/STAAR,58,Gap,Small group
+SK0560,S10056,ELA,Inference and evidence,SAT/TSIA/STAAR,52,Gap,Small group
+SK0561,S10056,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,65,Gap,Small group
+SK0570,S10057,ELA,Vocabulary in context,SAT/TSIA/STAAR,59,Gap,Small group
+SK0571,S10057,Math,Multi-step problem solving,SAT/TSIA/STAAR,72,Gap,Extension
+SK0580,S10058,ELA,Paired passage analysis,SAT/TSIA/STAAR,66,Gap,Small group
+SK0581,S10058,Math,TSIA quantitative reasoning,SAT/TSIA/STAAR,79,Strength,Extension
+SK0590,S10059,ELA,Revision and organization,SAT/TSIA/STAAR,73,Gap,Extension
+SK0591,S10059,Math,SAT problem solving and data analysis,SAT/TSIA/STAAR,86,Strength,Extension
+SK0600,S10060,ELA,Editing and conventions,SAT/TSIA/STAAR,80,Strength,Extension
+SK0601,S10060,Math,Linear equations,SAT/TSIA/STAAR,93,Strength,Extension
+SK0610,S10061,ELA,Sentence structure,SAT/TSIA/STAAR,87,Strength,Extension
+SK0611,S10061,Math,Systems of equations,SAT/TSIA/STAAR,45,Gap,Small group
+SK0620,S10062,ELA,Development of ideas,SAT/TSIA/STAAR,94,Strength,Extension
+SK0621,S10062,Math,Functions,SAT/TSIA/STAAR,52,Gap,Small group
+SK0630,S10063,ELA,Written composition,SAT/TSIA/STAAR,46,Gap,Small group
+SK0631,S10063,Math,Geometry and measurement,SAT/TSIA/STAAR,59,Gap,Small group
+SK0640,S10064,ELA,Argument analysis,SAT/TSIA/STAAR,53,Gap,Small group
+SK0641,S10064,Math,Data analysis,SAT/TSIA/STAAR,66,Gap,Small group
+SK0650,S10065,ELA,Short constructed response,SAT/TSIA/STAAR,60,Gap,Small group
+SK0651,S10065,Math,Probability/statistics,SAT/TSIA/STAAR,73,Gap,Extension
+SK0660,S10066,ELA,Main idea and author purpose,SAT/TSIA/STAAR,67,Gap,Small group
+SK0661,S10066,Math,Quadratics,SAT/TSIA/STAAR,80,Strength,Extension
+SK0670,S10067,ELA,Inference and evidence,SAT/TSIA/STAAR,74,Gap,Extension
+SK0671,S10067,Math,Algebraic expressions,SAT/TSIA/STAAR,87,Strength,Extension
+SK0680,S10068,ELA,Vocabulary in context,SAT/TSIA/STAAR,81,Strength,Extension
+SK0681,S10068,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,94,Strength,Extension
+SK0690,S10069,ELA,Paired passage analysis,SAT/TSIA/STAAR,88,Strength,Extension
+SK0691,S10069,Math,Multi-step problem solving,SAT/TSIA/STAAR,46,Gap,Small group
+SK0700,S10070,ELA,Revision and organization,SAT/TSIA/STAAR,95,Strength,Extension
+SK0701,S10070,Math,TSIA quantitative reasoning,SAT/TSIA/STAAR,53,Gap,Small group
+SK0710,S10071,ELA,Editing and conventions,SAT/TSIA/STAAR,47,Gap,Small group
+SK0711,S10071,Math,SAT problem solving and data analysis,SAT/TSIA/STAAR,60,Gap,Small group
+SK0720,S10072,ELA,Sentence structure,SAT/TSIA/STAAR,54,Gap,Small group
+SK0721,S10072,Math,Linear equations,SAT/TSIA/STAAR,67,Gap,Small group
+SK0730,S10073,ELA,Development of ideas,SAT/TSIA/STAAR,61,Gap,Small group
+SK0731,S10073,Math,Systems of equations,SAT/TSIA/STAAR,74,Gap,Extension
+SK0740,S10074,ELA,Written composition,SAT/TSIA/STAAR,68,Gap,Small group
+SK0741,S10074,Math,Functions,SAT/TSIA/STAAR,81,Strength,Extension
+SK0750,S10075,ELA,Argument analysis,SAT/TSIA/STAAR,75,Strength,Extension
+SK0751,S10075,Math,Geometry and measurement,SAT/TSIA/STAAR,88,Strength,Extension
+SK0760,S10076,ELA,Short constructed response,SAT/TSIA/STAAR,82,Strength,Extension
+SK0761,S10076,Math,Data analysis,SAT/TSIA/STAAR,95,Strength,Extension
+SK0770,S10077,ELA,Main idea and author purpose,SAT/TSIA/STAAR,89,Strength,Extension
+SK0771,S10077,Math,Probability/statistics,SAT/TSIA/STAAR,47,Gap,Small group
+SK0780,S10078,ELA,Inference and evidence,SAT/TSIA/STAAR,96,Strength,Extension
+SK0781,S10078,Math,Quadratics,SAT/TSIA/STAAR,54,Gap,Small group
+SK0790,S10079,ELA,Vocabulary in context,SAT/TSIA/STAAR,48,Gap,Small group
+SK0791,S10079,Math,Algebraic expressions,SAT/TSIA/STAAR,61,Gap,Small group
+SK0800,S10080,ELA,Paired passage analysis,SAT/TSIA/STAAR,55,Gap,Small group
+SK0801,S10080,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,68,Gap,Small group
+SK0810,S10081,ELA,Revision and organization,SAT/TSIA/STAAR,62,Gap,Small group
+SK0811,S10081,Math,Multi-step problem solving,SAT/TSIA/STAAR,75,Strength,Extension
+SK0820,S10082,ELA,Editing and conventions,SAT/TSIA/STAAR,69,Gap,Small group
+SK0821,S10082,Math,TSIA quantitative reasoning,SAT/TSIA/STAAR,82,Strength,Extension
+SK0830,S10083,ELA,Sentence structure,SAT/TSIA/STAAR,76,Strength,Extension
+SK0831,S10083,Math,SAT problem solving and data analysis,SAT/TSIA/STAAR,89,Strength,Extension
+SK0840,S10084,ELA,Development of ideas,SAT/TSIA/STAAR,83,Strength,Extension
+SK0841,S10084,Math,Linear equations,SAT/TSIA/STAAR,96,Strength,Extension
+SK0850,S10085,ELA,Written composition,SAT/TSIA/STAAR,90,Strength,Extension
+SK0851,S10085,Math,Systems of equations,SAT/TSIA/STAAR,48,Gap,Small group
+SK0860,S10086,ELA,Argument analysis,SAT/TSIA/STAAR,97,Strength,Extension
+SK0861,S10086,Math,Functions,SAT/TSIA/STAAR,55,Gap,Small group
+SK0870,S10087,ELA,Short constructed response,SAT/TSIA/STAAR,49,Gap,Small group
+SK0871,S10087,Math,Geometry and measurement,SAT/TSIA/STAAR,62,Gap,Small group
+SK0880,S10088,ELA,Main idea and author purpose,SAT/TSIA/STAAR,56,Gap,Small group
+SK0881,S10088,Math,Data analysis,SAT/TSIA/STAAR,69,Gap,Small group
+SK0890,S10089,ELA,Inference and evidence,SAT/TSIA/STAAR,63,Gap,Small group
+SK0891,S10089,Math,Probability/statistics,SAT/TSIA/STAAR,76,Strength,Extension
+SK0900,S10090,ELA,Vocabulary in context,SAT/TSIA/STAAR,70,Gap,Extension
+SK0901,S10090,Math,Quadratics,SAT/TSIA/STAAR,83,Strength,Extension
+SK0910,S10091,ELA,Paired passage analysis,SAT/TSIA/STAAR,77,Strength,Extension
+SK0911,S10091,Math,Algebraic expressions,SAT/TSIA/STAAR,90,Strength,Extension
+SK0920,S10092,ELA,Revision and organization,SAT/TSIA/STAAR,84,Strength,Extension
+SK0921,S10092,Math,Ratios and proportional reasoning,SAT/TSIA/STAAR,97,Strength,Extension
+SK0930,S10093,ELA,Editing and conventions,SAT/TSIA/STAAR,91,Strength,Extension
+SK0931,S10093,Math,Multi-step problem solving,SAT/TSIA/STAAR,49,Gap,Small group
+SK0940,S10094,ELA,Sentence structure,SAT/TSIA/STAAR,98,Strength,Extension
+SK0941,S10094,Math,TSIA quantitative reasoning,SAT/TSIA/STAAR,56,Gap,Small group
+SK0950,S10095,ELA,Development of ideas,SAT/TSIA/STAAR,50,Gap,Small group
+SK0951,S10095,Math,SAT problem solving and data analysis,SAT/TSIA/STAAR,63,Gap,Small group
+SK0960,S10096,ELA,Written composition,SAT/TSIA/STAAR,57,Gap,Small group
+SK0961,S10096,Math,Linear equations,SAT/TSIA/STAAR,70,Gap,Extension
+SK0970,S10097,ELA,Argument analysis,SAT/TSIA/STAAR,64,Gap,Small group
+SK0971,S10097,Math,Systems of equations,SAT/TSIA/STAAR,77,Strength,Extension
+SK0980,S10098,ELA,Short constructed response,SAT/TSIA/STAAR,71,Gap,Extension
+SK0981,S10098,Math,Functions,SAT/TSIA/STAAR,84,Strength,Extension
+SK0990,S10099,ELA,Main idea and author purpose,SAT/TSIA/STAAR,78,Strength,Extension
+SK0991,S10099,Math,Geometry and measurement,SAT/TSIA/STAAR,91,Strength,Extension

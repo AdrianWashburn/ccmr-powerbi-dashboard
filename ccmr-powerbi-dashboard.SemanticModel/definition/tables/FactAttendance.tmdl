@@ -1,0 +1,37 @@
+table FactAttendance
+
+	column AttendanceID
+		dataType: string
+		sourceColumn: AttendanceID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column SchoolYear
+		dataType: int64
+		sourceColumn: SchoolYear
+
+	column DaysEnrolled
+		dataType: int64
+		sourceColumn: DaysEnrolled
+
+	column DaysAbsent
+		dataType: int64
+		sourceColumn: DaysAbsent
+
+	column AttendanceRate
+		dataType: double
+		sourceColumn: AttendanceRate
+
+	column AttendanceConcern
+		dataType: string
+		sourceColumn: AttendanceConcern
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp

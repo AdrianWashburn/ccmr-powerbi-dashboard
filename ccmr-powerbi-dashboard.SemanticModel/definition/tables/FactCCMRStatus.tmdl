@@ -1,0 +1,17 @@
+table FactCCMRStatus
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column Pathway
+		dataType: string
+		sourceColumn: Pathway
+
+	column EvidenceVerified
+		dataType: boolean
+		sourceColumn: EvidenceVerified
+
+	column RecommendationBucket
+		dataType: string
+		sourceColumn: RecommendationBucket

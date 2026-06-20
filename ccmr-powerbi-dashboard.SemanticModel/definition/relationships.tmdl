@@ -1,0 +1,126 @@
+relationship r_DimStudent_DimStudentDemographics
+	fromColumn: DimStudentDemographics.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactAssessmentAttempt
+	fromColumn: FactAssessmentAttempt.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactSkillPerformance
+	fromColumn: FactSkillPerformance.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactTranscriptCourse
+	fromColumn: FactTranscriptCourse.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactCurrentSchedule
+	fromColumn: FactCurrentSchedule.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactCourseRequest
+	fromColumn: FactCourseRequest.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactCTEProgress
+	fromColumn: FactCTEProgress.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactIBC
+	fromColumn: FactIBC.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactDualCreditOnRamps
+	fromColumn: FactDualCreditOnRamps.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactCounselorNote
+	fromColumn: FactCounselorNote.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactInterventionAssignment
+	fromColumn: FactInterventionAssignment.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactAttendance
+	fromColumn: FactAttendance.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactDiscipline
+	fromColumn: FactDiscipline.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimStudent_FactCCMRStatus
+	fromColumn: FactCCMRStatus.LocalStudentID
+	toColumn: DimStudent.LocalStudentID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimProgramOfStudy_FactCTEProgress
+	fromColumn: FactCTEProgress.ProgramOfStudyID
+	toColumn: DimProgramOfStudy.ProgramOfStudyID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimProgramOfStudy_FactIBC
+	fromColumn: FactIBC.ProgramOfStudyID
+	toColumn: DimProgramOfStudy.ProgramOfStudyID
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimDate_FactAssessmentAttempt
+	fromColumn: FactAssessmentAttempt.AssessmentDate
+	toColumn: DimDate.Date
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimDate_FactCounselorNote_CreatedDate
+	fromColumn: FactCounselorNote.CreatedDate
+	toColumn: DimDate.Date
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimDate_FactCounselorNote_FollowUpDate
+	isActive: false
+	fromColumn: FactCounselorNote.FollowUpDate
+	toColumn: DimDate.Date
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimDate_FactInterventionAssignment_AssignedDate
+	fromColumn: FactInterventionAssignment.AssignedDate
+	toColumn: DimDate.Date
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimDate_FactInterventionAssignment_NextProgressMonitorDate
+	isActive: false
+	fromColumn: FactInterventionAssignment.NextProgressMonitorDate
+	toColumn: DimDate.Date
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimDate_FactIBC_AttemptDate
+	fromColumn: FactIBC.AttemptDate
+	toColumn: DimDate.Date
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimDate_FactDualCreditOnRamps_CompletionDate
+	fromColumn: FactDualCreditOnRamps.CompletionDate
+	toColumn: DimDate.Date
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimDate_FactDiscipline_IncidentDate
+	fromColumn: FactDiscipline.IncidentDate
+	toColumn: DimDate.Date
+	crossFilteringBehavior: oneDirection
+
+relationship r_DimIntervention_FactInterventionAssignment
+	fromColumn: FactInterventionAssignment.InterventionKey
+	toColumn: DimIntervention.InterventionKey
+	crossFilteringBehavior: oneDirection

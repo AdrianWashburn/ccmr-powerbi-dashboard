@@ -1,0 +1,37 @@
+table FactCTEProgress
+
+	column CTEProgressID
+		dataType: string
+		sourceColumn: CTEProgressID
+
+	column LocalStudentID
+		dataType: string
+		sourceColumn: LocalStudentID
+
+	column ProgramOfStudyID
+		dataType: string
+		sourceColumn: ProgramOfStudyID
+
+	column HighestLevelCompleted
+		dataType: int64
+		sourceColumn: HighestLevelCompleted
+
+	column Concentrator
+		dataType: boolean
+		sourceColumn: Concentrator
+
+	column Completer
+		dataType: boolean
+		sourceColumn: Completer
+
+	column NextRecommendedCTECourse
+		dataType: string
+		sourceColumn: NextRecommendedCTECourse
+
+	column SourceFileName
+		dataType: string
+		sourceColumn: SourceFileName
+
+	column RefreshTimestamp
+		dataType: dateTime
+		sourceColumn: RefreshTimestamp
