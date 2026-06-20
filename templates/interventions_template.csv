@@ -1,0 +1,16 @@
+InterventionID,LocalStudentID,ContentArea,SkillName,RecommendedIntervention,ProgressMonitor,ExitCriterion,RetestRecommended,AssignedDate,NextProgressMonitorDate,InterventionStatus
+INT000,S10000,Math,Main idea and author purpose,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-01,2025-06-01,Completed
+INT001,S10001,ELA,Inference and evidence,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-02,2025-06-02,Active
+INT002,S10002,Math,Vocabulary in context,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-03,2025-06-03,Active
+INT003,S10003,ELA,Paired passage analysis,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-04,2025-06-04,Active
+INT004,S10004,Math,Revision and organization,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-05,2025-06-05,Completed
+INT005,S10005,ELA,Editing and conventions,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-06,2025-06-06,Active
+INT006,S10006,Math,Sentence structure,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-07,2025-06-07,Active
+INT007,S10007,ELA,Development of ideas,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-08,2025-06-08,Active
+INT008,S10008,Math,Written composition,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-09,2025-06-09,Completed
+INT009,S10009,ELA,Argument analysis,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-10,2025-06-10,Active
+INT010,S10010,Math,Short constructed response,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-11,2025-06-11,Active
+INT011,S10011,ELA,Linear equations,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-12,2025-06-12,Active
+INT012,S10012,Math,Systems of equations,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-13,2025-06-13,Completed
+INT013,S10013,ELA,Functions,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-14,2025-06-14,Active
+INT014,S10014,Math,Geometry and measurement,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-15,2025-06-15,Active

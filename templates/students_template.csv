@@ -1,0 +1,16 @@
+LocalStudentID,TXUniqueStudentID,FirstName,LastName,CampusName,CampusID,GradeLevel,CohortYear,DateOfBirth,CounselorName,EnrollmentStatus,TeacherID
+S10000,TXU900000,Avery,Garcia,Lone Star High School,001,9,2030,2010-01-01,A. Nguyen,Active,T200
+S10001,TXU900001,Jordan,Brown,Lone Star High School,001,10,2029,2009-02-02,B. Patel,Active,T201
+S10002,TXU900002,Riley,Miller,Lone Star High School,001,11,2028,2008-03-03,C. Williams,Active,T202
+S10003,TXU900003,Mateo,Lopez,Lone Star High School,001,12,2027,2007-04-04,D. Garcia,Active,T203
+S10004,TXU900004,Sofia,Thomas,Lone Star High School,001,9,2030,2010-05-05,E. Johnson,Active,T204
+S10005,TXU900005,Noah,Jackson,Lone Star High School,001,10,2029,2009-06-06,A. Nguyen,Active,T205
+S10006,TXU900006,Emma,Perez,Lone Star High School,001,11,2028,2008-07-07,B. Patel,Active,T206
+S10007,TXU900007,Liam,Johnson,Lone Star High School,001,12,2027,2007-08-08,C. Williams,Active,T207
+S10008,TXU900008,Mia,Davis,Lone Star High School,001,9,2030,2010-09-09,D. Garcia,Active,T208
+S10009,TXU900009,Ethan,Hernandez,Lone Star High School,001,10,2029,2009-10-10,E. Johnson,Active,T209
+S10010,TXU900010,Olivia,Gonzalez,Lone Star High School,001,11,2028,2008-11-11,A. Nguyen,Active,T210
+S10011,TXU900011,Diego,Taylor,Lone Star High School,001,12,2027,2007-12-12,B. Patel,Active,T211
+S10012,TXU900012,Camila,Martin,Lone Star High School,001,9,2030,2010-01-13,C. Williams,Active,T200
+S10013,TXU900013,Jayden,Thompson,Lone Star High School,001,10,2029,2009-02-14,D. Garcia,Active,T201
+S10014,TXU900014,Isabella,Martinez,Lone Star High School,001,11,2028,2008-03-15,E. Johnson,Active,T202

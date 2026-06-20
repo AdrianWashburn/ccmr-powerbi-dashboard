@@ -1,0 +1,9 @@
+-- Configuration-driven examples. Replace FactCCMRStatus with calculated status table if materialized.
+STAAR Growth Eligible Count = /* STAAR Growth Eligible Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+STAAR Growth Earned Count = /* STAAR Growth Earned Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+STAAR Growth % = DIVIDE([STAAR Growth Count], [Total Students])
+English I Growth Risk Count = /* English I Growth Risk Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+English II Growth Risk Count = /* English II Growth Risk Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Algebra I Growth Risk Count = /* Algebra I Growth Risk Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Students Needing Accelerated Learning = /* Students Needing Accelerated Learning: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+Domain 2 Growth Watchlist Count = /* Domain 2 Growth Watchlist Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])

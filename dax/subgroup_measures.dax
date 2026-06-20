@@ -1,0 +1,7 @@
+-- Configuration-driven examples. Replace FactCCMRStatus with calculated status table if materialized.
+CCMR % for SPED = DIVIDE([CCMR Count for SPED], [Total Students])
+CCMR % for EB = DIVIDE([CCMR Count for EB], [Total Students])
+CCMR % for 504 = DIVIDE([CCMR Count for 504], [Total Students])
+CCMR % for Economically Disadvantaged = DIVIDE([CCMR Count for Economically Disadvantaged], [Total Students])
+CCMR % for High Focus = DIVIDE([CCMR Count for High Focus], [Total Students])
+CCMR Gap by Subgroup = /* CCMR Gap by Subgroup: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])

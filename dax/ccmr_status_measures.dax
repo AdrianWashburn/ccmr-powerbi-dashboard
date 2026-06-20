@@ -1,0 +1,11 @@
+-- Configuration-driven examples. Replace FactCCMRStatus with calculated status table if materialized.
+CCMR Met Count = /* CCMR Met Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR Not Met Count = /* CCMR Not Met Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR Evidence Verified Count = /* CCMR Evidence Verified Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR Evidence Missing Count = /* CCMR Evidence Missing Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR One Step Away Count = /* CCMR One Step Away Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR No Clear Pathway Count = /* CCMR No Clear Pathway Count: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR by Cohort = /* CCMR by Cohort: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR by Subgroup = /* CCMR by Subgroup: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR by Counselor = /* CCMR by Counselor: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])
+CCMR by Pathway = /* CCMR by Pathway: filter by named pathway/status/flag as documented */ DISTINCTCOUNT(DimStudent[LocalStudentID])

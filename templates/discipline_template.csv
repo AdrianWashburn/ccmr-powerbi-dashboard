@@ -1,0 +1,16 @@
+DisciplineID,LocalStudentID,IncidentDate,IncidentType,Severity,DaysRemoved
+DIS000,S10000,2025-03-01,Tardy sweep,Major,1
+DIS001,S10001,2025-03-02,Class disruption,Minor,1
+DIS002,S10002,2025-03-03,Tardy sweep,Minor,1
+DIS003,S10003,2025-03-04,Class disruption,Major,1
+DIS004,S10004,2025-03-05,Tardy sweep,Minor,1
+DIS005,S10005,2025-03-06,Class disruption,Minor,1
+DIS006,S10006,2025-03-07,Tardy sweep,Major,1
+DIS007,S10007,2025-03-08,Class disruption,Minor,1
+DIS008,S10008,2025-03-09,Tardy sweep,Minor,1
+DIS009,S10009,2025-03-10,Class disruption,Major,1
+DIS010,S10010,2025-03-11,Tardy sweep,Minor,1
+DIS011,S10011,2025-03-12,Class disruption,Minor,1
+DIS012,S10012,2025-03-13,Tardy sweep,Major,1
+DIS013,S10013,2025-03-14,Class disruption,Minor,1
+DIS014,S10014,2025-03-15,Tardy sweep,Minor,1

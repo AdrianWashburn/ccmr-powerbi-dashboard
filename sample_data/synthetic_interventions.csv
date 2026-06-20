@@ -1,0 +1,66 @@
+InterventionID,LocalStudentID,ContentArea,SkillName,RecommendedIntervention,ProgressMonitor,ExitCriterion,RetestRecommended,AssignedDate,NextProgressMonitorDate,InterventionStatus
+INT000,S10000,Math,Main idea and author purpose,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-01,2025-06-01,Completed
+INT001,S10001,ELA,Inference and evidence,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-02,2025-06-02,Active
+INT002,S10002,Math,Vocabulary in context,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-03,2025-06-03,Active
+INT003,S10003,ELA,Paired passage analysis,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-04,2025-06-04,Active
+INT004,S10004,Math,Revision and organization,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-05,2025-06-05,Completed
+INT005,S10005,ELA,Editing and conventions,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-06,2025-06-06,Active
+INT006,S10006,Math,Sentence structure,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-07,2025-06-07,Active
+INT007,S10007,ELA,Development of ideas,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-08,2025-06-08,Active
+INT008,S10008,Math,Written composition,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-09,2025-06-09,Completed
+INT009,S10009,ELA,Argument analysis,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-10,2025-06-10,Active
+INT010,S10010,Math,Short constructed response,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-11,2025-06-11,Active
+INT011,S10011,ELA,Linear equations,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-12,2025-06-12,Active
+INT012,S10012,Math,Systems of equations,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-13,2025-06-13,Completed
+INT013,S10013,ELA,Functions,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-14,2025-06-14,Active
+INT014,S10014,Math,Geometry and measurement,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-15,2025-06-15,Active
+INT015,S10015,ELA,Data analysis,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-16,2025-06-16,Active
+INT016,S10016,Math,Probability/statistics,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-17,2025-06-17,Completed
+INT017,S10017,ELA,Quadratics,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-18,2025-06-18,Active
+INT018,S10018,Math,Algebraic expressions,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-19,2025-06-19,Active
+INT019,S10019,ELA,Ratios and proportional reasoning,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-20,2025-06-20,Active
+INT020,S10020,Math,Multi-step problem solving,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-01,2025-06-01,Completed
+INT021,S10021,ELA,TSIA quantitative reasoning,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-02,2025-06-02,Active
+INT022,S10022,Math,SAT problem solving and data analysis,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-03,2025-06-03,Active
+INT023,S10023,ELA,Main idea and author purpose,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-04,2025-06-04,Active
+INT024,S10024,Math,Inference and evidence,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-05,2025-06-05,Completed
+INT025,S10025,ELA,Vocabulary in context,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-06,2025-06-06,Active
+INT026,S10026,Math,Paired passage analysis,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-07,2025-06-07,Active
+INT027,S10027,ELA,Revision and organization,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-08,2025-06-08,Active
+INT028,S10028,Math,Editing and conventions,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-09,2025-06-09,Completed
+INT029,S10029,ELA,Sentence structure,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-10,2025-06-10,Active
+INT030,S10030,Math,Development of ideas,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-11,2025-06-11,Active
+INT031,S10031,ELA,Written composition,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-12,2025-06-12,Active
+INT032,S10032,Math,Argument analysis,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-13,2025-06-13,Completed
+INT033,S10033,ELA,Short constructed response,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-14,2025-06-14,Active
+INT034,S10034,Math,Linear equations,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-15,2025-06-15,Active
+INT035,S10035,ELA,Systems of equations,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-16,2025-06-16,Active
+INT036,S10036,Math,Functions,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-17,2025-06-17,Completed
+INT037,S10037,ELA,Geometry and measurement,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-18,2025-06-18,Active
+INT038,S10038,Math,Data analysis,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-19,2025-06-19,Active
+INT039,S10039,ELA,Probability/statistics,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-20,2025-06-20,Active
+INT040,S10040,Math,Quadratics,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-01,2025-06-01,Completed
+INT041,S10041,ELA,Algebraic expressions,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-02,2025-06-02,Active
+INT042,S10042,Math,Ratios and proportional reasoning,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-03,2025-06-03,Active
+INT043,S10043,ELA,Multi-step problem solving,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-04,2025-06-04,Active
+INT044,S10044,Math,TSIA quantitative reasoning,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-05,2025-06-05,Completed
+INT045,S10045,ELA,SAT problem solving and data analysis,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-06,2025-06-06,Active
+INT046,S10046,Math,Main idea and author purpose,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-07,2025-06-07,Active
+INT047,S10047,ELA,Inference and evidence,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-08,2025-06-08,Active
+INT048,S10048,Math,Vocabulary in context,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-09,2025-06-09,Completed
+INT049,S10049,ELA,Paired passage analysis,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-10,2025-06-10,Active
+INT050,S10050,Math,Revision and organization,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-11,2025-06-11,Active
+INT051,S10051,ELA,Editing and conventions,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-12,2025-06-12,Active
+INT052,S10052,Math,Sentence structure,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-13,2025-06-13,Completed
+INT053,S10053,ELA,Development of ideas,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-14,2025-06-14,Active
+INT054,S10054,Math,Written composition,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-15,2025-06-15,Active
+INT055,S10055,ELA,Argument analysis,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-16,2025-06-16,Active
+INT056,S10056,Math,Short constructed response,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-17,2025-06-17,Completed
+INT057,S10057,ELA,Linear equations,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-18,2025-06-18,Active
+INT058,S10058,Math,Systems of equations,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-19,2025-06-19,Active
+INT059,S10059,ELA,Functions,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-20,2025-06-20,Active
+INT060,S10060,Math,Geometry and measurement,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-01,2025-06-01,Completed
+INT061,S10061,ELA,Data analysis,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-02,2025-06-02,Active
+INT062,S10062,Math,Probability/statistics,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-03,2025-06-03,Active
+INT063,S10063,ELA,Quadratics,Targeted small group,Weekly exit ticket,80% mastery,Yes,2025-05-04,2025-06-04,Active
+INT064,S10064,Math,Algebraic expressions,Targeted small group,Weekly exit ticket,80% mastery,No,2025-05-05,2025-06-05,Completed
